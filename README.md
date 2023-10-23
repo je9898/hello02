@@ -1,6 +1,7 @@
 # C:\git-work 경로 진입
 # git clone https://github.com/je9898/hello02.git
-# git branch -m develop
+# git branch -m main
+# git checkout -b develop
 # git checkout -b [featureSon]
 # 
 # 
