@@ -15,6 +15,7 @@
 # 
 # * pull_01
 # git checkout develop  // develop 브랜치로 이동
-# git branch -d [featureSon]  // 본인 브랜치 삭제
 # git pull origin develop  // 병합된 최신 develop 브랜치 pull
-# git checkout -b [featureSon]  // 본인이 작업할 브랜치 생성
+# git checkout [featureSon]  // 본인 브랜치로 이동
+# git merge develop  // pull 받은 최신 develop 브랜치를 내 브랜치로 갱신
+
