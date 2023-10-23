@@ -6,6 +6,7 @@
 # 
 # 
 # * push
+# git pull origin develop  // develop 최신상태로 갱신
 # git add .  // 로컬저장소 변경내용 추가
 # git commit -m ["커밋내용"]  // 로컬저장소에 추가한 내용 commit
 # git push origin [featureSon]  // 본인의 브랜치로 push -> 원격 저장소에 본인의 브랜치 만들어짐. (develop의 아래줄기로)
@@ -16,12 +17,4 @@
 # git checkout develop  // develop 브랜치로 이동
 # git branch -d [featureSon]  // 본인 브랜치 삭제
 # git pull origin develop  // 병합된 최신 develop 브랜치 pull
-# git checkout -b [featureSon]  // 본인이 작업할 브랜치 생성
-#
-#
-# * pull_02 (안전함)
-# git checkout develop  // develop 브랜치로 이동
-# git branch -d [featureSon]  // 본인 브랜치 삭제
-# git fetch  // 브랜치 변경내역 확인
-# git merge origin/develop  // 원격저장소 > 로컬저장소 변경내역 merge
 # git checkout -b [featureSon]  // 본인이 작업할 브랜치 생성
