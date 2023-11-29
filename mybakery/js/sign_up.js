@@ -84,38 +84,24 @@ function zipCodeSearch() {
         if(!payment) return alert("약관에 동의 해주세요.");
         if(!paypal) return alert("약관에 동의 해주세요.");
         else{
-            // const userDataLocal = localStorage.setItem("userData",JSON.stringify(userData));
-
-            // const localData = JSON.parse(localStorage.getItem("userData") || "[]") ;
-
-            // localData.push({
-            //     userNo:userData.length,
-            //     admin:0,
-            //     name:username.value,
-            //     phone:userPhone.value,
-            //     id:userId.value,
-            //     pw:userPw.value
-            // });
-            // localStorage.setItem("userData",JSON.stringify(localData));
-
-            // const localData = JSON.parse(localStorage.getItem("userData")) || [];
-
-            // localStorage.setItem("localUserData", JSON.stringify(
-            //     localUserData,{
-            //     userNo:userData.length,
-            //     admin:0,
-            //     name:username.value,
-            //     phone:userPhone.value,
-            //     id:userId.value,
-            //     pw:userPw.value
-            //     }
-                
-            // ))
-
+            
+            if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
+                localStorage.setItem("userData",JSON.stringify(userData));
+            }
+            const localData = JSON.parse(localStorage.getItem("userData") || "[]") ;
+            
+            localData.push({
+                userNo:localData[localData.length - 1].userNo+1,
+                admin:0,
+                name:username.value,
+                phone:userPhone.value,
+                id:userId.value,
+                pw:userPw.value
+            });
+            localStorage.setItem("userData",JSON.stringify(localData));
 
             alert("회원가입이 완료 되었습니다.")
             return location.href="login.html";
-            // 회원가입 완료시 자동 로그인 되게 해야하고, 로컬 스토리지에 데이터를 보내야함 (참고 https://velog.io/@byungjin0120/localStorage%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
         }
     }
 
@@ -136,3 +122,5 @@ function zipCodeSearch() {
         if(userId.value == "") return alert("아이디를 입력 해주세요.");
         if(!idfind) return alert("사용 가능한 아이디 입니다.");
     }
+
+    console.log(JSON.stringify(localStorage.userData));
