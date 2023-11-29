@@ -65,14 +65,15 @@ function makeBasketInfo(){
                 "        <td class='quantity__item'>" +
                 "            <div class='quantity'>" +
                 "                 <div class='pro-qty'>" +
-                "                       <span class='dec qtybtn minus-btn' value='" + i + "'>-</span>" +
+/*                "                       <span class='dec qtybtn minus-btn' value='" + i + "'>-</span>" +*/
+                "                       <span class='dec qtybtn minus-btn' onclick='PlusMinus(" + i + ",\"minus\")'>-</span>" +
                 "                       <input type='text' id='" + setParam.basket[i].mnuId + "-cnt' value=" + setParam.basket[i].cnt + ">" +
-                "                       <span class='inc qtybtn plus-btn'>+</span>" +
+                "                       <span class='inc qtybtn plus-btn' onclick='PlusMinus(" + i + ",\"plus\")'>+</span>" +
                 "                 </div>" +
                 "            </div>" +
                 "        </td>" +
                 "        <td class='cart__price' id='" + setParam.basket[i].mnuId + "-price'>" + (setParam.basket[i].price * setParam.basket[i].cnt).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원</td>" +
-                "        <td class='cart__close'><span class='icon_close'></span></td>" +
+                "        <td class='cart__close'><span class='icon_close' ></span></td>" +
                 "    </tr>"
             mainI.push(i)   //해당순번 기억하자 12345가 아니다
             allPrice = allPrice + setParam.basket[i].price * setParam.basket[i].cnt;
@@ -80,49 +81,6 @@ function makeBasketInfo(){
             price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
         }
         tbody.innerHTML += html;
-    }
-
-    /* 장바구니 수량추가 감소 버튼 반응형 이벤트 */
-    let minus = document.querySelectorAll(".minus-btn");
-    let plus = document.querySelectorAll(".plus-btn");
-    for(let i=0; i<minus.length; i++){
-        minus[i].addEventListener("click",function (){
-            let cnt = document.getElementById(setParam.basket[mainI[i]].mnuId + '-cnt');
-            let price = document.getElementById(setParam.basket[mainI[i]].mnuId + '-price');
-            if(parseInt(document.getElementById(setParam.basket[mainI[i]].mnuId + '-cnt').value) > 1){
-                price.innerHTML = ((parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value) * (parseInt(cnt.value) - 1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')) + "원";
-                cnt.setAttribute("value",parseInt(cnt.value) -1);
-                allPrice = allPrice - parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value);
-                price1.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-                if(couponYN){
-                    price2.innerHTML = (allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-                    price3.innerHTML = (allPrice - allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-                }else{
-                    price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-                }
-            }else{
-                cnt.setAttribute("value",1);
-            }
-            /*data 갱신 해줘*/
-            dataFunc(parseInt(cnt.value),mainI[i]);
-        });
-
-        plus[i].addEventListener("click",function (){
-            let cnt = document.getElementById(setParam.basket[mainI[i]].mnuId + '-cnt');
-            let price = document.getElementById(setParam.basket[mainI[i]].mnuId + '-price');
-            price.innerHTML = ((parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value) * (parseInt(cnt.value) + 1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')) + "원";
-            cnt.setAttribute("value",parseInt(cnt.value) + 1);
-            allPrice = allPrice + parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value);
-            price1.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-            if(couponYN){
-                price2.innerHTML = (allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-                price3.innerHTML = (allPrice - allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-            }else{
-                price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
-            }
-            /*data 갱신 해줘*/
-            dataFunc(parseInt(cnt.value),mainI[i]);
-        });
     }
 
     /*삭제버튼 이벤트*/
@@ -143,11 +101,35 @@ function makeBasketInfo(){
 
 }
 
-function dataFunc(cnt,mainI){
+function PlusMinus(i,type){
+    let cnt = document.getElementById(setParam.basket[i].mnuId + '-cnt');
+    let price = document.getElementById(setParam.basket[i].mnuId + '-price');
+    if(type === "plus"){
+        price.innerHTML = ((parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value) * (parseInt(cnt.value) + 1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')) + "원";
+        cnt.setAttribute("value",parseInt(cnt.value) + 1);
+        allPrice = allPrice + parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value);
+    }else if(type === "minus" && parseInt(document.getElementById(setParam.basket[i].mnuId + '-cnt').value) > 1){
+            price.innerHTML = ((parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value) * (parseInt(cnt.value) - 1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')) + "원";
+            cnt.setAttribute("value",parseInt(cnt.value) -1);
+            allPrice = allPrice - parseInt(price.innerText.replace(/(원|,|)/g, "")) / parseInt(cnt.value);
+    }else{
+        cnt.setAttribute("value",1);
+    }
+    price1.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+    if(couponYN){
+        price2.innerHTML = (allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+        price3.innerHTML = (allPrice - allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+    }else{
+        price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+    }
+    dataFunc(parseInt(cnt.value),i);
+}
+
+function dataFunc(cnt,i){
 
     console.log("func : dataFunc() !")
 
-    setParam.basket[mainI].cnt = cnt;
+    setParam.basket[i].cnt = cnt;
     localStorage.setItem("setParam",JSON.stringify(setParam));
     console.log(localStorage)
 }
