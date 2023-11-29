@@ -1,0 +1,49 @@
+.site-btn {
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    width: 80%;
+}
+
+.breadcrumb__text {
+    margin-left: 30%;
+}
+
+.checkout__input__checkbox {
+    display: inline-block;
+}
+.checkout__input__checkbox p{
+    font-size: 15px;
+}
+
+.signin_id_pw {
+    float: right;
+}
+
+.signin_id_pw a{
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    margin-right: 25px;
+}
+
+/* style.css 주석 처리 함 */
+.breadcrumb__text h2 {
+    font-size: 40px;
+    color: #000000;
+    text-align: left;
+    /* border-bottom: 1px solid black;
+    display: inline-block; */
+}
+
+/* style.css에 .log_in도 있음 */
+.log_out {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .log_out:hover {
+    color: #000;
+  }
+  .log_out:focus {
+    color: #000;
+  }
