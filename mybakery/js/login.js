@@ -29,22 +29,23 @@ function loginBtn(){
     if (login){
             alert("로그인 되었습니다.");
             const loginData = JSON.stringify({
-                id: userId,
-                pw: userPw,
+                id: userId.value,
+                pw: userPw.value,
                 loginyn: "y"
             })
             sessionStorage.setItem("loginData", loginData);
-            location.href="index.html";    
+            return location.href="index.html";
     }else if (!login){
         alert("아이디 또는 비밀번호가 틀립니다.");
     }
 
     if (keepId.checked){
         localStorage.setItem("keepId",JSON.stringify(userId.value));
+        return location.reload();
     } else if (!keepId.checked){
         localStorage.removeItem("keepId");
+        return location.reload();
     }
-    location.reload();
 }
 
 
