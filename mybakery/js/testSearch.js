@@ -5,20 +5,17 @@ function init(){
     testFunc(); //테스트 데이터 넣자
 }
 
-
-
 let testSearchInput = document.querySelector("#testSearchInput");
 let testSearchButton = document.querySelector("#testSearchButton");
 
-
 //검색버튼 이벤트
 testSearchButton.addEventListener("click", function (){
-    let searchValue =  testSearchInput.value;  //검색어
+    let searchValue = testSearchInput.value;  //검색어
     setParam.testSearchData.push(searchValue);  //최근 검색어 저장
     let searchNumber = [];  //몇번째 친구에 검색어가 포함되어 있는지 저장
     setParam.menuTable.forEach(function (data, index){ // forEach문으로 setParam.menuTable의 mnuNa와 searchValue 비교
        if(data.mnuNa.indexOf(searchValue)>0){   //indexOf 사용해 비교대상 문구와 비교 있으면 양수 없으면 음수
-           searchNumber.push(index);
+           searchNumber.push(index);            // 양수면(있으면) 해당순번 저장하자
        }
     });
 
