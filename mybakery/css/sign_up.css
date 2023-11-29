@@ -1,0 +1,43 @@
+#sign_up_name,
+#sign_up_id {
+    width: 85%;
+}
+
+#zip_code {
+    width: 50%;
+}
+
+#btn_zip_code {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #dddddd;
+    width: 120px;
+    height: 49px;
+    color: rgb(61, 61, 61);
+}
+
+#id_check {
+    margin-right: 20px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #dddddd;
+    width: 120px;
+    height: 49px;
+    color: rgb(61, 61, 61);
+}
+
+#sign_up_btn {
+    font-size: 14px;
+    color: #ffffff;
+    background: #111111;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 14px 30px;
+    margin-left: 25%;
+    margin-top: 20px;
+  }
+
+  .testbtn {
+    height: 50px;
+  }

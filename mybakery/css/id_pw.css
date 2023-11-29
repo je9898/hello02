@@ -1,0 +1,43 @@
+.site-btn {
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+#find_id {
+    margin-bottom: 30px;
+}
+
+#find_pw {
+    border-top: 1px solid rgba(0, 0, 0, 0.623);
+    padding-top: 30px;
+}
+
+.find_text {
+    display: inline-block;
+    border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.find_text h3{
+    font-size: 25px;
+    color: rgb(48, 48, 48);
+}
+
+.checkout__input p{
+    margin-top: 20px;
+}
+
+.id_find_btn,
+.pw_find_btn {
+    font-size: 14px;
+    color: #ffffff;
+    background: #111111;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 14px 30px;
+    margin-left: 40%;
+  }
