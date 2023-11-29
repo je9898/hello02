@@ -1,0 +1,39 @@
+
+/* 손윤제가 추가한 css 목록 */
+
+#bdDetail{
+    text-align: left;
+}
+
+.bdKates{
+    padding-right: 80%
+}
+
+.bdKates .option{
+    padding-right: 470px;
+}
+
+.bdBtns{
+    text-align: center;
+}
+
+.bdBtn{
+    text-align: center;
+    background-color: #f08632;
+}
+
+.bdBtn:hover{
+    background-color: #f89444;
+}
+
+.icon_close:hover{
+    cursor: pointer;
+}
+*{
+    @font-face {
+        font-family: 'MICEGothic Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+}
