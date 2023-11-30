@@ -1,0 +1,35 @@
+/* 카테고리 슬라이더 수치조정 */
+.categories__slider.owl-carousel .owl-stage-outer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(240, 135, 50, 0.5);
+  }
+  
+  /* 카테고리 필터링 버튼생성 */
+  button{
+    background-color: rgba( 255, 255, 255, 0 );
+    border-color: #f08632;
+    border-top: #f08632;
+    border-bottom: #f08632;
+    border-left: #f08632;
+    border-right: #f08632;
+  }
+  
+  /* 메뉴 사이즈 조정 */
+  .product__item__pic {
+    height: 300px;
+    max-width: 500%;
+    position: relative;
+    background-position: center;
+  }
+ 
+  /* 얘네는 원본에서 지운 애들임 */
+  .breadcrumb__text h2 {
+    font-size: 50px;
+    color: #000000;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Playfair Display", serif;
+  } 
+  
+  
