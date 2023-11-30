@@ -1,0 +1,210 @@
+
+.cru{
+    max-width: 80%;
+  }
+  
+  .cru_btn{
+    text-align: center;
+    float: right;
+    text-align: right;
+  }
+  
+  #incruitSubmit{
+    position: relative;
+    border-radius: 5px;
+    background-color: #f08632; 
+    color:white;
+  }
+  
+  #incruitReset{
+    position: relative;
+    border-radius: 5px;
+    background-color: #f08632; 
+    color:white;
+  }
+  
+  #ad_Btn{
+    position: relative;
+    border-radius: 5px;
+    background-color: #f08632; 
+    color:white;
+    margin: 15px;
+  }
+  
+  .incruit__title {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .incruit__input {
+    margin-bottom: 6px;
+  }
+  .incruit__input p {
+    color: #444444;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .incruit__input p span {
+    color: #f08632;
+  }
+  .incruit__input input {
+    height: 50px;
+    width: 60%;
+    border: 1px solid #e1e1e1;
+    font-size: 14px;
+    color: #666666;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .incruit__input input::-webkit-input-placeholder {
+    color: #666666;
+  }
+  .incruit__input input::-moz-placeholder {
+    color: #666666;
+  }
+  .incruit__input input:-ms-input-placeholder {
+    color: #666666;
+  }
+  .incruit__input input::-ms-input-placeholder {
+    color: #666666;
+  }
+  .incruit__input input::placeholder {
+    color: #666666;
+  }
+  
+  .incruit__input__checkbox label {
+    font-size: 14px;
+    color: #444444;
+    position: relative;
+    padding-left: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .incruit__input__checkbox label input {
+    position: absolute;
+    visibility: hidden;
+  }
+  .incruit__input__checkbox label input:checked ~ .checkmark {
+    border-color: #f08632;
+  }
+  .incruit__input__checkbox label input:checked ~ .checkmark:after {
+    opacity: 1;
+  }
+  .incruit__input__checkbox label .checkmark {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    height: 14px;
+    width: 14px;
+    border: 1.5px solid #888888;
+    content: "";
+    border-radius: 2px;
+  }
+  .incruit__input__checkbox label .checkmark:after {
+    position: absolute;
+    left: 1px;
+    top: -3px;
+    width: 14px;
+    height: 7px;
+    border: solid #f08632;
+    border-width: 1.5px 1.5px 0px 0px;
+    -webkit-transform: rotate(127deg);
+    -ms-transform: rotate(127deg);
+    transform: rotate(127deg);
+    content: "";
+    opacity: 0;
+  }
+  .incruit__input__checkbox p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+  
+  .incruit__order {
+    background: #fdf3ea;
+    padding: 30px;
+  }
+  .incruit__order .order__title {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+  }
+  .incruit__order p {
+    color: #444444;
+    font-size: 16px;
+  }
+  .incruit__order .site-btn {
+    width: 100%;
+    margin-top: 8px;
+    letter-spacing: 0;
+  }
+  
+  .incruit__order__products {
+    font-size: 16px;
+    color: #111111;
+    overflow: hidden;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .incruit__order__products span {
+    float: right;
+  }
+  
+  .incruit__total__products {
+    margin-bottom: 20px;
+  }
+  .incruit__total__products li {
+    font-size: 16px;
+    color: #444444;
+    list-style: none;
+    line-height: 26px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  .incruit__total__products li:last-child {
+    margin-bottom: 0;
+  }
+  .incruit__total__products li samp {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .incruit__total__products li span {
+    color: #111111;
+    float: right;
+    font-weight: 600;
+  }
+  
+  .incruit__total__all {
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 15px 0;
+    margin-bottom: 26px;
+  }
+  .incruit__total__all li {
+    list-style: none;
+    font-size: 16px;
+    color: #111111;
+    line-height: 40px;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  .incruit__total__all li span {
+    color: #f08632;
+    float: right;
+  }
+  
+  .textBtn{
+    margin : 5px;
+  }

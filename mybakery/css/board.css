@@ -12,7 +12,7 @@ table {
   }
   .page-title h3 {
     font-size: 28px;
-    color: #333333;
+    color: #f08632;
     font-weight: 400;
     text-align: center;
   }
@@ -176,4 +176,23 @@ table {
     width: 1px;
     height: 1px;
   }
-  
+
+  .info_page{
+    margin-top: 15px;
+    float: right;
+    color :#f08632
+  }
+.bContainer{
+  margin: 15px;
+  align-items: center;
+  position:relative;
+}
+
+.prevBtn{
+  padding : 15px;
+}
+
+.nextBtn{
+  padding : 15px;
+}
+
