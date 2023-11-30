@@ -18,3 +18,6 @@ function alliance(){
     "width=650, height=650, left=30, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
         }
 
+
+
+  console.log(document.querySelector(".log_in"));

@@ -51,7 +51,7 @@ function calendarInit() {
         // console.log(prevDate, prevDay, nextDate, nextDay);
 
         // 현재 월 표기
-        $('.year-month').text(currentYear + '.' + (currentMonth + 1));
+        $('.year-month').text(currentYear + '.' + (currentMonth + 1) + ' EVENT');
 
         // 렌더링 html 요소 생성
         calendar = document.querySelector('.dates')
