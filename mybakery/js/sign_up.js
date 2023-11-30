@@ -45,25 +45,7 @@ function zipCodeSearch() {
         }).open();
     }
     
-    // [필수]
-    // 비밀번호, 비밀번호 확인이 서로 같지않으면 회원가입 불가, alert - 회원가입 버튼 클릭에 조건을 넣어본다 (완료)
-    // 모든 항목 입력 안했을 시 회원가입 불가 - 검색해보기 (완료)
-    // 모든 약관 동의 체크 안할 시 회원가입 불가 - 검색해보기 (완료)
-    // 회원가입 버튼 클릭시 이름, 아이디, 비밀번호, 전화번호는 로컬스토리지에 저장 - 세션스토리지 응용해서 해보기 (완료)
-    // 로그인페이지에서도 로컬스토리지에 있는 회원가입 정보 불러와서 로그인 가능하게 연결 (미완료)
-    // 아이디 중복확인 (data.js, 로컬스토리지 id데이터랑 같은게 있으면 alert 또는 innerHTML, 회원가입 불가) - find 사용해보기 (미완료, 로컬 스토리지에서도 데이터를 받아야함)
-
-    // [선택]
-    // 약관 스크롤 넣기
-    // 성별 선택 추가
-
-
-
-
-
-
-
-    // 회원가입버튼 관련 조건문들, if만 사용할시 한줄로 정리 가능하다.
+    // 회원가입버튼 관련 조건들, if만 사용할시 한줄로 정리 가능하다.
     function signUpButton(){
         const accOr = document.querySelector("#acc-or").checked;
         const payment = document.querySelector("#payment").checked;
@@ -84,12 +66,11 @@ function zipCodeSearch() {
         if(!payment) return alert("약관에 동의 해주세요.");
         if(!paypal) return alert("약관에 동의 해주세요.");
         else{
-            
+            // 데이터js의 내용이 한번만 저장되게 함
             if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
                 localStorage.setItem("userData",JSON.stringify(userData));
             }
             const localData = JSON.parse(localStorage.getItem("userData") || "[]") ;
-            
             localData.push({
                 userNo:localData[localData.length - 1].userNo+1,
                 admin:0,
@@ -122,5 +103,3 @@ function zipCodeSearch() {
         if(userId.value == "") return alert("아이디를 입력 해주세요.");
         if(!idfind) return alert("사용 가능한 아이디 입니다.");
     }
-
-    console.log(JSON.stringify(localStorage.userData));
