@@ -55,7 +55,7 @@ function makeBasketInfo(){
             html += "   <tr class='cart-main'>" +
                 "        <td class='product__cart__item'>" +
                 "            <div class='product__cart__item__pic'>" +
-                "                <img src='./img/menuImg/img_" + setParam.basket[i].mnuId + ".PNG' style='width: 100px' height='100px' alt=''>" + /*'./img/menuImg/img_" + setParam.basket[i].mnuId + ".PNG'*/
+                "                <img src='./img/menuImg/img_" + setParam.basket[i].mnuId + ".PNG' style='width: 100px' height='100px' alt='' class='menuImgs'>" + /*'./img/menuImg/img_" + setParam.basket[i].mnuId + ".PNG'*/
                 "            </div>" +
                 "            <div class='product__cart__item__text'>" +
                 "                <h6>" + setParam.basket[i].mnuNa + "</h6>" +
@@ -67,7 +67,7 @@ function makeBasketInfo(){
                 "                 <div class='pro-qty'>" +
 /*                "                       <span class='dec qtybtn minus-btn' value='" + i + "'>-</span>" +*/
                 "                       <span class='dec qtybtn minus-btn' onclick='PlusMinus(" + i + ",\"minus\")'>-</span>" +
-                "                       <input type='text' id='" + setParam.basket[i].mnuId + "-cnt' value=" + setParam.basket[i].cnt + ">" +
+                "                       <input type='text'  id='" + setParam.basket[i].mnuId + "-cnt' value=" + setParam.basket[i].cnt + " disabled>" +
                 "                       <span class='inc qtybtn plus-btn' onclick='PlusMinus(" + i + ",\"plus\")'>+</span>" +
                 "                 </div>" +
                 "            </div>" +

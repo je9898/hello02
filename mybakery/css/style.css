@@ -31,7 +31,6 @@
 html,
 body {
   height: 100%;
-  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: ivory;
 }
@@ -45,7 +44,6 @@ h6 {
   margin: 0;
   color: #11111194;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -74,7 +72,6 @@ h6 {
 
 p {
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
   color: #111111;
   font-weight: 400;
   line-height: 28px;
@@ -1903,7 +1900,7 @@ margin-right: 20%;
   width: 175px;
 }
 .shopping__cart__table table tbody tr td.quantity__item .quantity .pro-qty {
-  width: 90px;
+  width: 100px;
 }
 .shopping__cart__table table tbody tr td.quantity__item .quantity .pro-qty input {
   width: 65px;
@@ -2208,7 +2205,6 @@ margin-right: 20%;
   margin-bottom: 0;
 }
 .checkout__total__products li samp {
-  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
 }
@@ -4132,4 +4128,19 @@ margin-right: 20%;
 
 .crewcard{
   margin-top : 30px;
+}
+@font-face {
+  font-family: 'NPSfontBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+*{
+  font-family: 'NPSfontBold';
+  font-weight: bold;
+}
+
+.menuImgs{
+  border: 3px solid rgb(130, 130, 90);
+  border-radius: 10px ;
 }
