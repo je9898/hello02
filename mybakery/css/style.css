@@ -27,11 +27,13 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+
 html,
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: ivory;
 }
 
 h1,
@@ -134,8 +136,8 @@ ol {
 }
 
 .spad {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .text-white h1,
@@ -325,12 +327,13 @@ ol {
 } */
 
 .header {
-  background: #f08632;
+  background: ivory;
 }
 
 .header__top {
   position: relative;
-  background: #ffffff;
+  background: ivory;
+  
 }
 
 .header__top__inner {
@@ -466,7 +469,6 @@ ol {
 .header__top__right__cart .cart__price span {
   color: #111111;
 }
-
 .header__menu {
   text-align: center;
 }
@@ -477,10 +479,10 @@ ol {
   margin-right: -5px;
 }
 .header__menu ul li.active a {
-  background: #111111;
+  background: rgb(223, 223, 202);
 }
 .header__menu ul li:hover a {
-  background: #111111;
+  background:  rgb(223, 223, 202);
 }
 .header__menu ul li:hover .dropdown {
   top: 62px;
@@ -525,7 +527,7 @@ ol {
   left: 0;
   top: 82px;
   width: 155px;
-  background: #111111;
+  background: none;
   text-align: left;
   padding: 5px 0;
   z-index: 9;
@@ -538,10 +540,11 @@ ol {
 .header__menu ul li .dropdown li {
   display: block;
   margin-right: 0;
+  margin-bottom: 2px;
 }
 .header__menu ul li .dropdown li a {
   font-size: 14px;
-  color: #ffffff;
+  color: black;
   font-weight: 400;
   padding: 5px 20px;
   text-transform: capitalize;
@@ -551,7 +554,7 @@ ol {
 }
 .header__menu ul li a {
   font-size: 16px;
-  color: #ffffff;
+  color: black;
   display: block;
   font-weight: 600;
   padding: 20px 35px 18px;
@@ -559,7 +562,10 @@ ol {
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
+  border-radius: 40px;
 }
+
+
 
 .offcanvas-menu-wrapper {
   display: none;
@@ -572,8 +578,15 @@ ol {
 /*---------------------
   Hero
 -----------------------*/
+
+
+.hero, .header {
+margin-left: 20%;
+margin-right: 20%;
+}
+
 .hero__item {
-  height: 700px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,6 +594,7 @@ ol {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  border-radius: 20px;
 }
 
 .hero__text {
@@ -1015,9 +1029,14 @@ ol {
 /*---------------------
   Map
 -----------------------*/
+.map-2{
+  height: 180px;
+
+}
 .map {
   position: relative;
-  height: 300px;
+  height: 180px;
+  margin-top: -10px;
 }
 .map .container {
   position: relative;
@@ -1168,12 +1187,14 @@ ol {
   Footer
 -----------------------*/
 .footer {
-  padding-top: 70px;
+  padding-top: 50px;
+
 }
 
 .footer__widget {
   position: relative;
   margin-bottom: 30px;
+  margin-top: 25px;
 }
 .footer__widget:after {
   position: absolute;
@@ -4103,4 +4124,12 @@ ol {
   .checkout__order__products span {
     display: none;
   }
+}
+
+.footer-row{
+  height: 250px;
+}
+
+.crewcard{
+  margin-top : 30px;
 }

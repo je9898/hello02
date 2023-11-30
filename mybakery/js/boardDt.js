@@ -6,13 +6,16 @@ console.log(setParam);
 
 
 //의 데이를 a 에 가져와서 담는다.
-//let param = JSON.parse(localStorage.getItem("boardTable"));
+
+
+
+let param = JSON.parse(localStorage.getItem("boardTable"));
 
 
 setParam.boardTable = boardTable;
 console.log(setParam);
 
-
+//받은 데이터에 해당하는 번호 이미지 출력
 let html = "";
 let BoardDt =  setParam.boardTable[boardId]
     html = "<div class='boardName'>"  +
