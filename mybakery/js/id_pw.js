@@ -1,8 +1,9 @@
 if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
     localStorage.setItem("userData",JSON.stringify(userData));
 }
-    const localIdPw = JSON.parse(localStorage.getItem("userData"));
+const localIdPw = JSON.parse(localStorage.getItem("userData"));
 
+// 아이디 찾기
 function idFindButton(){
     const id_find_name = document.querySelector('.id_find_name').value;
     const id_find_phone = document.querySelector('.id_find_phone').value;
@@ -21,6 +22,7 @@ function idFindButton(){
     
 }
 
+// 비밀번호 찾기
 function pwFindButton(){
     const pw_find_id = document.querySelector('.pw_find_id').value;
     const pw_find_phone = document.querySelector('.pw_find_phone').value;
