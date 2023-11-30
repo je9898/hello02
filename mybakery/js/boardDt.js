@@ -9,20 +9,20 @@ console.log(setParam);
 
 
 
-let param = JSON.parse(localStorage.getItem("boardTable"));
+let param = JSON.parse(localStorage.getItem("bData"));
 
 
-setParam.boardTable = boardTable;
+setParam.param = param;
 console.log(setParam);
 
 //받은 데이터에 해당하는 번호 이미지 출력
 let html = "";
-let BoardDt =  setParam.boardTable[boardId]
+let BoardDt =  setParam.param
     html = "<div class='boardName'>"  +
                 "<h3>" + BoardDt.title + "</h3>" +
             "</div>" +
-            "<div class='boardDate'>" +
-            "   <input class='boardDate' type='text' value='" + BoardDt.regDa + "' disabled>" + 
+            "<div class='boardDate2'>" +
+            "   <input class='boardDate' type='text' value=' 등록일 : " + BoardDt.regDa + "' disabled>" + 
             "</div>" +
             "<div>" + 
             "   <input class='boardDetail' type='text' value='" + BoardDt.con + "' disabled>" + 

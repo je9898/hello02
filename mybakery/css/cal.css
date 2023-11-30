@@ -30,7 +30,7 @@
 .sec_cal .cal_nav .go-prev,
 .sec_cal .cal_nav .go-next {
     display: block;
-    width: 50px;
+    width: 60px;
     height: 68px;
     font-size: 0;
     display: flex;
@@ -104,7 +104,8 @@
 
 /*3째주 마다 할인 행사*/
 .sec_cal .cal_wrap .day:nth-child(15), .day:nth-child(16), .day:nth-child(17), .day:nth-child(18), .day:nth-child(19), .day:nth-child(20), .day:nth-child(21) {
-    background-color: #d86686;
+    background-color: #66d899;
+    margin: ;
 }
 
 .sec_cal .cal_wrap .day.disable {
