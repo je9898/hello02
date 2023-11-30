@@ -1,27 +1,30 @@
 let setParam ={}
-setParam.borderDat = borderDat;
+
 //const eventImg = document.querySelector(".eventImg")
 console.log(setParam);
 
 
 
 //의 데이를 a 에 가져와서 담는다.
-
-var getE = JSON.stringify(localStorage.getItem(""));
-
-setParam.# = #
-function showE(){
-    let point = setParam.#
-    var eventImg = document.createElement('img');
-    const imgDiv = document.querySelector('.eventImg');
-    var imgURL = 'img/event/event' + point +'.png';
-    eventImg.src = imgURL;
-    eventImg.alt = point;
-    eventImg.classList.add('img-fluid');
-    imgDiv.appendChild(eventimg);
-}
+//let param = JSON.parse(localStorage.getItem("boardTable"));
 
 
+setParam.boardTable = boardTable;
+console.log(setParam);
 
 
-showE()
+let html = "";
+let BoardDt =  setParam.boardTable[boardId]
+    html = "<div class='boardName'>"  +
+                "<h3>" + BoardDt.title + "</h3>" +
+            "</div>" +
+            "<div class='boardDate'>" +
+            "   <input class='boardDate' type='text' value='" + BoardDt.regDa + "' disabled>" + 
+            "</div>" +
+            "<div>" + 
+            "   <input class='boardDetail' type='text' value='" + BoardDt.con + "' disabled>" + 
+            "</div>"
+            let showBoard = document.querySelector(".showBoard");
+            showBoard.innerHTML += html;
+
+
