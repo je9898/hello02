@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Source">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/flation.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/elegant_font.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/Magnific-Popup-master.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/font-awesome-4.7.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/bootstrap-4.4.1-dist.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/jquery-nice-select-1.1.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mybakery/Source/SlickNav-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
