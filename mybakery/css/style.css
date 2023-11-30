@@ -123,7 +123,6 @@ ol {
   line-height: 60px;
   font-weight: 700;
   font-style: italic;
-  font-family: "Playfair Display", serif;
 }
 
 .set-bg {
@@ -1396,7 +1395,7 @@ margin-right: 20%;
   color: #000000;
   font-weight: 700;
   font-style: italic;
-  font-family: "Playfair Display", serif;
+  
 } */
 
 .breadcrumb__links {
@@ -2504,7 +2503,7 @@ margin-right: 20%;
   padding-top: 42px;
 }
 .blog__item__text h2 {
-  font-family: "Playfair Display", serif;
+  
   color: #111111;
   font-style: italic;
   margin-bottom: 20px;
@@ -2727,7 +2726,7 @@ margin-right: 20%;
   color: #111111;
   line-height: 26px;
   font-style: italic;
-  font-family: "Playfair Display", serif;
+  
   margin-bottom: 8px;
 }
 .blog__sidebar__recent__item__text span {
@@ -2766,7 +2765,7 @@ margin-right: 20%;
 }
 .blog__hero__text h2 {
   font-size: 46px;
-  font-family: "Playfair Display", serif;
+  
   font-weight: 700;
   font-style: italic;
   color: #111111;
@@ -3187,7 +3186,7 @@ margin-right: 20%;
   color: #111111;
   font-weight: 700;
   font-style: italic;
-  font-family: "Playfair Display", serif;
+  
   margin-bottom: 20px;
 }
 .contact__text ul {
