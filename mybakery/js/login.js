@@ -28,6 +28,7 @@ function loginBtn(){
             const loginData = JSON.stringify({
                 id: userId.value,
                 pw: userPw.value,
+                userNo: login.userNo
             })
             sessionStorage.setItem("loginData", loginData);
             localStorage.setItem("keepId",JSON.stringify(userId.value)); //로그인 성공시에도 아이디 저장되게 함
