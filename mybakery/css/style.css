@@ -901,9 +901,13 @@ margin-right: 20%;
   Testimonial
 -----------------------*/
 .testimonial {
-  background: #fdf3ea;
-  padding-top: 90px;
+  background: #fff4d4;
+  padding-top: 40px;
   padding-bottom: 70px;
+  margin-left: 18%;
+  margin-right: 18%;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 .testimonial__slider .col-lg-6 {
@@ -1474,6 +1478,7 @@ margin-right: 20%;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 90px;
+  border-radius: 20px;
 }
 .about__video .play-btn {
   display: inline-block;

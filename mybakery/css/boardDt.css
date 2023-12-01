@@ -15,10 +15,15 @@
     border-style: ridge;
     border-radius: 20px;
     height: 200px;
-    text-align: ;
 }
 
 .boardDate{
+    text-align: center;
+    width: 160px;
+    border-radius: 10px;
+    
+}
+.boardDate2 {
     text-align: right;
-    border: none;
+    margin-bottom: -15px;
 }
