@@ -232,10 +232,8 @@ function setPageOf(count){
     }
 }
 
-
-      
 function title_btn(i){
-    localStorage.setItem('bData', JSON.stringify(bData[i]));    
+    localStorage.setItem('getB', bData[i].boardId);
     location.href ='boardDt.html';
     console.log(bData[i]);
 }
@@ -250,6 +248,16 @@ const setPageBtn = () => {
     pageBtn.innerHTML +=  `<span class="number-button" onclick="setPageOf(${i})" > ${i} </span`;
       }
     };
+
+let admin = document.querySelector("#admin");
+admin.addEventListener("dblclick",function (){
+   let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+   if(loginData.admin === 1){
+       if(confirm("MAKE BOARD")){
+           location.href = "makeBoard.html";
+       }
+   }
+});
     
 setPageBtn();
 setPageOf(cnt); // 첫페이지 첫진입

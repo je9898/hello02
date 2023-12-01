@@ -69,7 +69,8 @@ makeBtn.addEventListener("click",function (){
     localStorage.setItem("setParam",JSON.stringify(setParam));
     console.log(localStorage)
     alert("작성완료 !")
-    location.href = "공지목록.html";
+    localStorage.setItem('getB', setParam.boardTable[boardCnt-1].boardId +1);
+    location.href = "boardDt.html";
 });
 
 //날짜 리턴

@@ -72,8 +72,9 @@ function zipCodeSearch() {
             }
             
             const localData = JSON.parse(localStorage.getItem("userData") || "[]") ;
+            console.log(localData)
             localData.push({
-                userNo:localData[localData.length - 1].userNo+1,
+                userNo:localData.length+1,
                 admin:userId.value == "park" || userId.value == "son" ? 1:0,
                 name:username.value,
                 phone:userPhone.value,
