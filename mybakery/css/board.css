@@ -188,14 +188,6 @@ table {
   position:relative;
 }
 
-.prevBtn{
-  padding : 15px;
-}
-
-.nextBtn{
-  padding : 15px;
-}
-
 .boardSize{
   width: 500px;
 }

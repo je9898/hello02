@@ -3,7 +3,8 @@ fetch("header.html").then(function response(response){
 }).then(function data (data) {
     document.querySelector("header").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
     let link = JSON.stringify(window.location.pathname).split('/');
-    let linkName = link[3].replaceAll(".html\"","");
+    console.log(link[link.length-1].replaceAll(".html\"",""))
+    let linkName = link[link.length-1].replaceAll(".html\"","");
     document.querySelector("#"+linkName).setAttribute("class","active");
     return loginOut();
 });

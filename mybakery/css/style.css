@@ -485,7 +485,7 @@ ol {
   background: #fdf1a0;
 }
 .header__menu ul li:hover a {
-  background:  rgb(223, 223, 202);
+  background:  #fdf1a0;
 }
 .header__menu ul li:hover .dropdown {
   top: 62px;
@@ -566,6 +566,7 @@ ol {
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
   border-radius: 40px;
+  margin-right: 15px;
 }
 
 
@@ -1198,7 +1199,6 @@ margin-right: 20%;
 -----------------------*/
 .footer {
   padding-top: 50px;
-
 }
 
 .footer__widget {
@@ -1216,7 +1216,7 @@ margin-right: 20%;
   content: "";
 }
 .footer__widget h6 {
-  color: #ffffff;
+  color: black;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 22px;
@@ -1224,7 +1224,7 @@ margin-right: 20%;
 .footer__widget ul li {
   list-style: none;
   font-size: 14px;
-  color: #a4a4a4;
+  color: black;
   line-height: 36px;
 }
 .footer__about {
@@ -1249,14 +1249,14 @@ margin-right: 20%;
 }
 .footer__about p {
   font-size: 14px;
-  color: #a4a4a4;
+  color: black;
   line-height: 26px;
   margin-bottom: 25px;
 }
 .footer__about .footer__social a {
   display: inline-block;
-  color: #ffffff;
-  background: rgba(225, 225, 225, 0.1);
+  color: #555555;
+  background: #fffff0;
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -1286,8 +1286,8 @@ margin-right: 20%;
 /* 크루모집, 제휴업체를 왼쪽 Working Hours에 둠 */
 .crewcard a { 
   display: inline-block;
-  background-color: #66666627;
-  color: rgb(241, 241, 241);
+  background-color: #fffff0;
+  color: black;
   width: 150px;
   height: 45px;
   border-radius: 10px;
@@ -1297,19 +1297,23 @@ margin-right: 20%;
   margin-right: 5px;
 }
 
+.crewcard a:hover{
+  background-color: #bf8b75;
+}
+
 .footer__newslatter {
   padding-left: 50px;
   margin-bottom: 30px;
 }
 .footer__newslatter h6 {
-  color: #ffffff;
+  color: black;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 22px;
 }
 .footer__newslatter p {
   font-size: 14px;
-  color: #a4a4a4;
+  color: black;
   line-height: 26px;
   margin-bottom: 25px;
 }
@@ -1354,8 +1358,8 @@ margin-right: 20%;
 
 .copyright {
   background: #000000;
-  padding: 18px 0 14px;
-  margin-top: 40px;
+  /*padding: 18px 0 14px;*/
+  margin-top: 50px;
 }
 
 .copyright__text {
@@ -4142,6 +4146,7 @@ margin-right: 20%;
 
 .crewcard{
   margin-top : 30px;
+  width: 110%;
 }
 @font-face {
   font-family: 'NPSfontBold';
@@ -4157,4 +4162,41 @@ margin-right: 20%;
 .menuImgs{
   border: 3px solid rgb(130, 130, 90);
   border-radius: 10px ;
+}
+
+.WORKING_HOURS{
+  margin-left: 10%;
+}
+
+.copyri{
+  margin-top: 3%;
+}
+
+.footer__about .footer__social a:hover{
+  background-color: #bf8b75;
+}
+
+.prevBtn, .nextBtn{
+  background-color: #fdf1a0;
+  border-radius: 20px;
+  width: 10px;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.bContainer{
+  text-align: center;
+}
+
+.number-button{
+  margin-right: 7px;
+  border-radius: 20px;
+  padding: 3px;
+  text-align: center;
+}
+
+.number-button:hover{
+  background-color: #fdf1a0;
+  cursor: pointer;
 }
