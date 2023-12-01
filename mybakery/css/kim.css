@@ -207,3 +207,8 @@
   .textBtn{
     margin : 5px;
   }
+
+  /*이벤트 css*/
+  #event_search_btn{
+    width: 10px;
+  }

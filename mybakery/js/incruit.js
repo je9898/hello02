@@ -43,8 +43,8 @@ function adBtn() {
     new daum.Postcode( {
       oncomplete: function( data ) {
         document.getElementById( 'inPost' ).value = data.zonecode;
-        document.getElementById( 'crAd2' ).value = data.address;
-        document.getElementById( 'crAd2' ).focus();
+        document.getElementById( 'inAdr2' ).value = data.address;
+        document.getElementById( 'inAdr' ).focus();
       }
     } ).open();
   }
@@ -70,18 +70,18 @@ crSb.addEventListener("click",function (){
     crAd.value === ""){
     alert("모든 내용을 입력해 주세요.")
     return;
-    }
+    saveData();
+    }})
 
 //초기화 버튼    
 crRe.addEventListener("click",function (){
     document.querySelectorAll("input[type=text], input[type=textarea]")[0].value="";
     });
 
-
-//저장
-    let incruitData = setParam.cruTable.length;
-
-    let params = {};
+function saveData() {
+let incruitData = setParam.cruTable.length;
+    
+ let params = {};
     params.crNo = setParam.cruTable[incruitData-1].incruitData +1;
     params.crNa = setParam.value;
     params.crBir = setParam.value;
@@ -91,10 +91,28 @@ crRe.addEventListener("click",function (){
     params.crIntr = setParam.value;
 
     setParam.cruTable.push(params);
+    localStorage.setItem("setParam", JSON.stringify(setParam));
+    console.log("Data saved:", params);
+}
 
-    localStorage.setItem("setParam",JSON.stringify(setParam));
-    console.log(localStorage);
-});
+
+//저장
+    // let incruitData = setParam.cruTable.length;
+
+    // let params = {};
+    // params.crNo = setParam.cruTable[incruitData-1].incruitData +1;
+    // params.crNa = setParam.value;
+    // params.crBir = setParam.value;
+    // params.crAd = setParam.value;
+    // params.crPh = setParam.value;
+    // params.crEm = setParam.value;
+    // params.crIntr = setParam.value;
+
+    // setParam.cruTable.push(params);
+
+    // localStorage.setItem("setParam",JSON.stringify(setParam));
+    // console.log(localStorage);
+
+
 
 init();
-

@@ -216,7 +216,7 @@ let html = "";
 
 function setPageOf(count){
     cnt = count;
-    
+
     let tbody = document.querySelector("tbody");
     tbody.innerHTML = "";
     for(i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){

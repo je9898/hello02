@@ -342,6 +342,7 @@ ol {
   width: 250px;
   margin-top: 20px;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .header__top__left {
@@ -4163,6 +4164,7 @@ margin-right: 20%;
   border: 3px solid rgb(130, 130, 90);
   border-radius: 10px ;
 }
+<<<<<<< HEAD
 
 .WORKING_HOURS{
   margin-left: 10%;
@@ -4200,3 +4202,9 @@ margin-right: 20%;
   background-color: #fdf1a0;
   cursor: pointer;
 }
+=======
+/*수정*/
+input{
+  border-radius: 15px;
+}
+>>>>>>> 2ab5b47fe2fd9529e4aef8d1238abc330699fcce
