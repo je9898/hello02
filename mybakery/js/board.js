@@ -1,29 +1,6 @@
 let setParam ={};
-
-// border testData
-// let borderDat =[
-//     {
-//         num : 1,
-//         title :'[공지사항] 개인정보 처리방침 변경안내처리방침',
-//         date : '2023.11.22'
-//     },
-//     {
-//         num : 2,
-//         title :'[공지사항] 개인정보 처리방침 변경안내처리방침',
-//         date : '2023.11.23'
-//     },
-//     {
-//         num : 3,
-//         title :'[공지사항] 개인정보 처리방침 변경안내처리방침',
-//         date : '2023.11.24'
-//     },
-//     {
-//         num : 4,
-//         title :'[공지사항] 개인정보 처리방침 변경안내처리방침',
-//         date : '2024.01.24'
-//     }
-// ]
-
+let cnt = 1;
+let numberButton;
 let boardTable = [
     {
         boardId : 0,
@@ -238,6 +215,8 @@ const totalPageCount = () => {
 let html = "";
 
 function setPageOf(count){
+    cnt = count;
+
     let tbody = document.querySelector("tbody");
     tbody.innerHTML = "";
     for(i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){
@@ -247,10 +226,11 @@ function setPageOf(count){
                 "    <a href='#! class='title_b' onclick = 'js:title_btn("+i+")'>"+ bData[i].title +"</a>" +
                 "    <p>테스트</p>" +
                 "    </th>" +
-                "    <td>"+ bData[i].upDa +"</td>" +
+                "    <td>"+ JSON.stringify(bData[i].upDa).substring(0,1) +"</td>" +
                 "</tr>" 
-                tbody.innerHTML += html;
-    }}
+        tbody.innerHTML += html;
+    }
+}
 
 
       
@@ -267,10 +247,10 @@ const pageBtn = document.querySelector('.nuBtn');
 const setPageBtn = () => {
     pageBtn.innerHTML = '';
     for(let i = 1; i <= totalPageCount(); i++){
-    pageBtn.innerHTML +=  `<span class="number-button" onclick="setPageOf(${i})" > ${i} </span`; 
+    pageBtn.innerHTML +=  `<span class="number-button" onclick="setPageOf(${i})" > ${i} </span`;
       }
     };
     
 setPageBtn();
-setPageOf(1); // 첫페이지 첫진입
+setPageOf(cnt); // 첫페이지 첫진입
 
