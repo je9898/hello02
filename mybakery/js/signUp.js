@@ -70,14 +70,15 @@ function zipCodeSearch() {
             if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
                 localStorage.setItem("userData",JSON.stringify(userData));
             }
+            
             const localData = JSON.parse(localStorage.getItem("userData") || "[]") ;
             localData.push({
                 userNo:localData[localData.length - 1].userNo+1,
-                admin:0,
+                admin:userId.value == "park" || userId.value == "son" ? 1:0,
                 name:username.value,
                 phone:userPhone.value,
                 id:userId.value,
-                pw:userPw.value
+                pw:userPw.value,
             });
             localStorage.setItem("userData",JSON.stringify(localData));
 
