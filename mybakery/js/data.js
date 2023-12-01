@@ -1,3 +1,4 @@
+/*고객정보 데이터*/
 const userData = [
     {
         userNo:0,
@@ -86,5 +87,185 @@ const userData = [
         phone:'010-9365-7391',
         id:'c8yxfl5m84',
         pw:'0l65u'
+    }
+]
+
+/*장바구니 데이터*/
+const basket = [
+    {
+        userNo : 1,
+        mnuId : 1001,
+        mnuNa : "에그마요 샌드위치",
+        price : 5200,
+        cnt : 1
+    },
+    {
+        userNo : 1,
+        mnuId : 1002,
+        mnuNa : "햄치즈  샌드위치",
+        price : 5000,
+        cnt : 3
+    },
+    {
+        userNo : 1,
+        mnuId : 1003,
+        mnuNa : "시저샐러드",
+        price : 4800,
+        cnt : 2
+    },
+    {
+        userNo : 2,
+        mnuId : 1004,
+        mnuNa : "치킨샐러드",
+        price : 5400,
+        cnt : 4
+    },
+    {
+        userNo : 3,
+        mnuId : 1005,
+        mnuNa : "BLT샌드위치",
+        price : 5000,
+        cnt : 5
+
+    },
+    {
+        userNo : 3,
+        mnuId : 2001,
+        mnuNa : "아메리카노",
+        price : 5200,
+        cnt : 4
+    },
+    {
+        userNo : 3,
+        mnuId : 2002,
+        mnuNa : "카페라떼",
+        price : 5000,
+        cnt : 2
+    },
+    {
+        userNo : 2,
+        mnuId : 2003,
+        mnuNa : "카라멜마끼아또",
+        price : 4800,
+        cnt : 1
+    },
+    {
+        userNo : 3,
+        mnuId : 2004,
+        mnuNa : "그린티",
+        price : 5400,
+        cnt : 4
+    },
+    {
+        userNo : 3,
+        mnuId : 3001,
+        mnuNa : "단팥빵",
+        price : 1500,
+        cnt : 2
+    },
+    {
+        userNo : 2,
+        mnuId : 3002,
+        mnuNa : "슈크림빵",
+        price : 1500,
+        cnt : 3
+    },
+    {
+        userNo : 2,
+        mnuId : 3003,
+        mnuNa : "바게트",
+        price : 2000,
+        cnt : 1
+    },
+    {
+        userNo : 1,
+        mnuId : 3004,
+        mnuNa : "연유바게트",
+        price : 3500,
+        cnt : 1
+    },
+    {
+        userNo : 3,
+        mnuId : 3005,
+        mnuNa : "소금빵",
+        price : 3400,
+        cnt : 3
+    },
+    {
+        userNo : 3,
+        mnuId : 3006,
+        mnuNa : "소세지빵",
+        price : 3500,
+        cnt : 2
+    },
+    {
+        userNo : 1,
+        mnuId : 4001,
+        mnuNa : "순우유",
+        price : 25000,
+        cnt : 4
+    },
+    {
+        userNo : 2,
+        mnuId : 4002,
+        mnuNa : "바스크치즈",
+        price : 18000,
+        cnt : 5
+    },
+    {
+        userNo : 3,
+        mnuId : 4003,
+        mnuNa : "샤를로트",
+        price : 27000,
+        cnt : 4
+    },
+    {
+        userNo : 3,
+        mnuId : 4004,
+        mnuNa : "생크림",
+        price : 22000,
+        cnt : 2
+    },
+    {
+        userNo : 2,
+        mnuId : 4005,
+        mnuNa : "초콜릿",
+        price : 26000,
+        cnt : 1
+    },
+    {
+        userNo : 1,
+        mnuId : 5001,
+        mnuNa : "에그타르트",
+        price : 5200,
+        cnt : 3
+    },
+    {
+        userNo : 3,
+        mnuId : 5002,
+        mnuNa : "레몬타르트",
+        price : 5000,
+        cnt : 2
+    },
+    {
+        userNo : 2,
+        mnuId : 5003,
+        mnuNa : "마들렌",
+        price : 4800,
+        cnt : 1
+    },
+    {
+        userNo : 1,
+        mnuId : 5004,
+        mnuNa : "마카롱",
+        price : 5400,
+        cnt : 1
+    },
+    {
+        userNo : 3,
+        mnuId : 5005,
+        mnuNa : "바움쿠엔",
+        price : 5000,
+        cnt : 3
     }
 ]

@@ -1,17 +1,18 @@
+fetch("header.html").then(function response(response){
+    return response.text();
+}).then(function data (data) {
+    document.querySelector("header").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
+    let link = JSON.stringify(window.location.pathname).split('/');
+    let linkName = link[3].replaceAll(".html\"","");
+    document.querySelector("#"+linkName).setAttribute("class","active");
+    return loginOut();
+});
+
 fetch("footer.html").then(function response(response){
         return response.text();
     }).then(function data (data) {
         document.querySelector("footer").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
     });
-
-
-fetch("header.html").then(function response(response){
-        return response.text();
-    }).then(function data (data) {
-        document.querySelector("header").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
-        return loginOut();
-    });
-
 
 //제휴업체 팝업
 function alliance(){
