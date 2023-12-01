@@ -6,6 +6,15 @@ fetch("header.html").then(function response(response){
     console.log(link[link.length-1].replaceAll(".html\"",""))
     let linkName = link[link.length-1].replaceAll(".html\"","");
     document.querySelector("#"+linkName).setAttribute("class","active");
+
+    if(sessionStorage.getItem("loginData")){
+        let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+        let price = document.querySelector("#price");
+        let id = loginData.id;
+        price.innerHTML = localStorage.getItem(id) + "원";
+    }
+
+
     return loginOut();
 });
 
@@ -44,10 +53,5 @@ function goBasket(){
     }
 }
 
-if(sessionStorage.getItem("loginData")){
-    console.log(document.querySelector("#price"));
-    let loginData = JSON.stringify(sessionStorage.getItem("loginData"));
-    let price = document.querySelector("#price");
-    price.textContent = loginData.id;
-}
+
 
