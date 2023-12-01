@@ -303,7 +303,7 @@ ol {
   cursor: pointer;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+  transform: rotate(45deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +329,7 @@ ol {
 .header__top {
   position: relative;
   background: ivory;
-  
+
 }
 /*kim24 수정*/
 .header__top__inner {
@@ -342,7 +342,6 @@ ol {
   width: 250px;
   margin-top: 20px;
   margin-bottom: 50px;
-  justify-content: center;
 }
 
 .header__top__left {
@@ -586,8 +585,8 @@ ol {
 
 
 .hero, .header {
-margin-left: 20%;
-margin-right: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .hero__item {
@@ -596,8 +595,8 @@ margin-right: 20%;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   justify-items: center;
   border-radius: 20px;
 }
@@ -713,8 +712,8 @@ margin-right: 20%;
   border-color: transparent #f08632 #f08632 transparent;
   content: "";
   -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
   opacity: 0;
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
@@ -823,11 +822,11 @@ margin-right: 20%;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: absolute;
   right: 0;
   top: -50px;
@@ -1070,7 +1069,7 @@ margin-right: 20%;
   text-align: center;
   background: #ffffff;
   -webkit-box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
-          box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
+  box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
   padding: 30px 25px 25px;
   position: relative;
 }
@@ -1084,8 +1083,8 @@ margin-right: 20%;
   background: #ffffff;
   content: "";
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   margin: 0 auto;
 }
 .map__inner h6 {
@@ -1148,7 +1147,7 @@ margin-right: 20%;
   padding: 6px 10px 4px;
   border-radius: 2px;
   -webkit-box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
-          box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
+  box-shadow: 0 0 10px rgba(223, 223, 224, 0.7);
   -webkit-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
@@ -1285,7 +1284,7 @@ margin-right: 20%;
 } */
 
 /* 크루모집, 제휴업체를 왼쪽 Working Hours에 둠 */
-.crewcard a { 
+.crewcard a {
   display: inline-block;
   background-color: #fffff0;
   color: black;
@@ -1414,7 +1413,7 @@ margin-right: 20%;
   color: #000000;
   font-weight: 700;
   font-style: italic;
-  
+
 } */
 
 .breadcrumb__links {
@@ -1466,7 +1465,7 @@ margin-right: 20%;
   position: relative;
   margin-bottom: 20px;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -moz-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
 }
 .about__bar .about__bar__item .barfiller .tip {
@@ -1487,11 +1486,11 @@ margin-right: 20%;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 90px;
   border-radius: 20px;
 }
@@ -1803,8 +1802,8 @@ margin-right: 20%;
 .product__details__tab .nav-tabs {
   border-bottom: 1px solid #e1e1e1;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .product__details__tab .nav-tabs .nav-item {
   margin-right: 45px;
@@ -2523,7 +2522,7 @@ margin-right: 20%;
   padding-top: 42px;
 }
 .blog__item__text h2 {
-  
+
   color: #111111;
   font-style: italic;
   margin-bottom: 20px;
@@ -2746,7 +2745,7 @@ margin-right: 20%;
   color: #111111;
   line-height: 26px;
   font-style: italic;
-  
+
   margin-bottom: 8px;
 }
 .blog__sidebar__recent__item__text span {
@@ -2762,11 +2761,11 @@ margin-right: 20%;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 640px;
 }
 
@@ -2785,7 +2784,7 @@ margin-right: 20%;
 }
 .blog__hero__text h2 {
   font-size: 46px;
-  
+
   font-weight: 700;
   font-style: italic;
   color: #111111;
@@ -3206,7 +3205,7 @@ margin-right: 20%;
   color: #111111;
   font-weight: 700;
   font-style: italic;
-  
+
   margin-bottom: 20px;
 }
 .contact__text ul {
@@ -3545,7 +3544,7 @@ margin-right: 20%;
   }
 
   .slicknav_nav .slicknav_row,
-.slicknav_nav a {
+  .slicknav_nav a {
     padding: 7px 0;
     margin: 0;
     color: #111111;
@@ -4021,8 +4020,8 @@ margin-right: 20%;
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
   .section-title h2,
-.blog__hero__text h2,
-.blog__item__text h2 {
+  .blog__hero__text h2,
+  .blog__item__text h2 {
     font-size: 28px;
     line-height: normal;
   }
@@ -4164,7 +4163,6 @@ margin-right: 20%;
   border: 3px solid rgb(130, 130, 90);
   border-radius: 10px ;
 }
-<<<<<<< HEAD
 
 .WORKING_HOURS{
   margin-left: 10%;
@@ -4202,9 +4200,8 @@ margin-right: 20%;
   background-color: #fdf1a0;
   cursor: pointer;
 }
-=======
+
 /*수정*/
 input{
   border-radius: 15px;
 }
->>>>>>> 2ab5b47fe2fd9529e4aef8d1238abc330699fcce
