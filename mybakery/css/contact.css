@@ -1,0 +1,16 @@
+.contact__text h3 {
+    font-style: normal;
+    text-align: center;
+    display: block;
+}
+
+#nameText:active,
+#emailText:active,
+#messageText:active{
+    border: 2px solid #fdd8a0;;
+}
+#nameText:focus,
+#emailText:focus,
+#messageText:focus{
+    border: 2px solid #fdd8a0;;
+}
