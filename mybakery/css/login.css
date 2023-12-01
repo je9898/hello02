@@ -47,3 +47,10 @@
   .log_out:focus {
     color: #000;
   }
+
+input:active{
+border: 2px solid #fdd8a0;;
+}
+input:focus{
+border: 2px solid #fdd8a0;;
+}

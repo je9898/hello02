@@ -17,6 +17,11 @@
     height: 49px;
     color: rgb(61, 61, 61);
     margin-left: 10px;
+    border-radius: 10px;
+}
+
+.breadcrumb__text h2 {
+  color: #111111;
 }
 
 #id_check {
@@ -50,6 +55,7 @@
     color: rgb(61, 61, 61);
     margin-top: 40px;
     margin-right: 100px;
+    border-radius: 10px;
   }
 
   .scrollBar1 {
@@ -81,4 +87,11 @@
     color: red;
     font-size: 15px;
     font-weight: 100;
+  }
+  
+  input:active{
+    border: 2px solid #fdd8a0;
+  }
+  input:focus{
+    border: 2px solid #fdd8a0;
   }
