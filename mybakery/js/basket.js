@@ -6,18 +6,6 @@ let userNo = 1;
 let setParam = {};
 function init(){
     console.log("init : basket.js !")
-    fetch("footer.html").then(function response(response){
-        return response.text();
-    }).then(function data (data) {
-        document.querySelector("footer").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
-    });
-
-
-    fetch("header.html").then(function response(response){
-        return response.text();
-    }).then(function data (data) {
-        document.querySelector("header").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
-    });
     //localStorage 데이터 받아 쓰기 (setParam 에 저장)
     setParam = JSON.parse(localStorage.setParam || "{}");
     console.log(localStorage.setParam)

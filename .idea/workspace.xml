@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="15af9f01-cf8d-4699-bee4-8b8767fd4e2c" name="Changes" comment="" />
+    <list default="true" id="15af9f01-cf8d-4699-bee4-8b8767fd4e2c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/js/basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybakery/js/footer_header.js" beforeDir="false" afterPath="$PROJECT_DIR$/mybakery/js/footer_header.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +21,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2Yt3EOJfNV0Bc0quB1fS1n3mxyB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +44,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "son",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -39,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701330938367</updated>
       <workItem from="1701330943564" duration="10000" />
+      <workItem from="1701391091999" duration="599000" />
     </task>
     <servers />
   </component>
