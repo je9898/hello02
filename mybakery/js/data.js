@@ -269,3 +269,380 @@ const basket = [
         cnt : 3
     }
 ]
+
+const cruTable= [ 
+]
+
+const boardTable = [
+    {
+        eventId : 0,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 1,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 2,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220129,
+        upDa : 20220110
+    },
+    {
+        eventId : 3,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220128,
+        upDa : 20220111
+    },
+    {
+        eventId : 4,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220120,
+        upDa : 20211225
+    },
+    {
+        eventId : 5,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 6,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 7,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 8,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 9,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 10,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 11,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 12,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 13,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220129,
+        upDa : 20220110
+    },
+    {
+        eventId : 14,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220128,
+        upDa : 20220111
+    },
+    {
+        eventId : 15,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220120,
+        upDa : 20211225
+    },
+    {
+        eventId : 16,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 17,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 18,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 19,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 20,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 21,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 22,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    }
+]
+
+const eventTable = [
+    {
+        eventId : 0,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 1,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 2,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220129,
+        upDa : 20220110
+    },
+    {
+        eventId : 3,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220128,
+        upDa : 20220111
+    },
+    {
+        eventId : 4,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220120,
+        upDa : 20211225
+    },
+    {
+        eventId : 5,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 6,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 7,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 8,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 9,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 10,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 11,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 12,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220109,
+        upDa : 20220120
+    },
+    {
+        eventId : 13,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220129,
+        upDa : 20220110
+    },
+    {
+        eventId : 14,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220128,
+        upDa : 20220111
+    },
+    {
+        eventId : 15,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20220120,
+        upDa : 20211225
+    },
+    {
+        eventId : 16,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 17,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 18,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 19,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 20,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 21,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    },
+    {
+        eventId : 22,
+        userNo : 1,
+        title : "신제품 1+1",
+        con : "신제품 1+1 이벤트",
+        regDa : 20211220,
+        upDa : 20211225
+    }
+]
