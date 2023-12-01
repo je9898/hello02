@@ -36,3 +36,18 @@ function logout() {
     location.reload();
 }
 
+function goBasket(){
+    if (!sessionStorage.getItem("loginData")){
+        location.href="login.html";
+    }else{
+        location.href="basket.html";
+    }
+}
+
+if(sessionStorage.getItem("loginData")){
+    console.log(document.querySelector("#price"));
+    let loginData = JSON.stringify(sessionStorage.getItem("loginData"));
+    let price = document.querySelector("#price");
+    price.textContent = loginData.id;
+}
+
