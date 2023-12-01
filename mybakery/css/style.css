@@ -114,7 +114,7 @@ ol {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 4px;
-  display: block;
+  display: none;
   margin-bottom: 10px;
 }
 .section-title h2 {
@@ -4204,4 +4204,7 @@ ol {
 /*수정*/
 input{
   border-radius: 15px;
+}
+.footer__widget{
+  justify-content: center;
 }

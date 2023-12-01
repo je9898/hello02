@@ -113,6 +113,4 @@ let incruitData = setParam.cruTable.length;
     // localStorage.setItem("setParam",JSON.stringify(setParam));
     // console.log(localStorage);
 
-
-
 init();
