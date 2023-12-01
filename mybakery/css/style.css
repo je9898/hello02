@@ -95,10 +95,10 @@ a:focus {
   outline: none;
   color: #ffffff;
 }
-
+/*kim24 수정*/
 ul,
 ol {
-  padding: 0;
+  padding: 30px;
   margin: 0;
 }
 
@@ -331,10 +331,17 @@ ol {
   background: ivory;
   
 }
-
+/*kim24 수정*/
 .header__top__inner {
-  height: 102px;
-  padding-top: 38px;
+  height: 300px;
+  padding-top: 35px;
+}
+/*kim24 수정*/
+#logo_img{
+  height: 250px;
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .header__top__left {
@@ -475,7 +482,7 @@ ol {
   margin-right: -5px;
 }
 .header__menu ul li.active a {
-  background: rgb(223, 223, 202);
+  background: #fdf1a0;
 }
 .header__menu ul li:hover a {
   background:  rgb(223, 223, 202);
@@ -1043,12 +1050,15 @@ margin-right: 20%;
   z-index: 5;
   top: 20px;
 }
-
+/*
+*/
 .map__iframe {
+  height: 102%;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  border: 1px solid rgb(114, 114, 114);
 }
 .map__iframe iframe {
   width: 100%;
