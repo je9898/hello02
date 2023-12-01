@@ -203,3 +203,9 @@ table {
   border-radius: 10px;
   background-color: #f8ec9a;
 }
+
+
+#noBoard{
+  font-size: 150px;
+  text-align: center;
+}

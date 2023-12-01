@@ -3,37 +3,12 @@
 * 기능 : 화면 진입 시 바로 init() 호출
 */
 let setParam = {};
+let boardTable = [];
 function init(){
     console.log("init : makeBoard.js !")
-    /*text*/
-    let boardTable = [
-        {
-            boardId : 0,
-            userNo : 1,
-            title : "신제품 1+1",
-            con : "신제품 1+1 이벤트",
-            regDa : 20220109,
-            upDa : 20220120
-        },
-        {
-            boardId : 1,
-            userNo : 1,
-            title : "신제품 1+1",
-            con : "신제품 1+1 이벤트",
-            regDa : 20220109,
-            upDa : 20220120
-        }
-    ]
     setParam = JSON.parse(localStorage.setParam || "{}");
-
-    if(setParam.boardTable === null || setParam.boardTable === undefined ){
-        setParam.boardTable = boardTable;
-        localStorage.setItem("setParam",JSON.stringify(setParam));
-    }
-    /*text*/
-
-    console.log(setParam)
-    bdToday.value =today("yy.mm.dd");
+    boardTable = setParam.boardTable || [];
+    bdToday.value = today("yy.mm.dd");
 }
 
 const bdTitle = document.querySelector("#bdTitle"); //제목
@@ -53,23 +28,28 @@ makeBtn.addEventListener("click",function (){
         return;
     }
 
-    let boardCnt = setParam.boardTable.length;
+    let boardCnt = boardTable.length || 0;
+
+    let loginData = JSON.parse(sessionStorage.getItem("loginData"));
 
     let params = {};
-    params.boardId = setParam.boardTable[boardCnt-1].boardId +1;
-    params.userNo = "1";//setParam.user.userNo;
+    params.boardId = boardCnt;
+    params.userNo = loginData.userNo;
     params.title = bdTitle.value;
     params.con = bdDetail.value;
     params.kate = bdKate.value;
-    params.upDa = today("yymmdd");
+    params.upDa = today("yy.mm.dd");
+    params.regDa = today("yy.mm.dd");
 
-    setParam.boardTable.push(params);
+    boardTable.push(params);
 
     //게시글 데이터 올리자
+
+    setParam.boardTable = boardTable;
     localStorage.setItem("setParam",JSON.stringify(setParam));
     console.log(localStorage)
     alert("작성완료 !")
-    localStorage.setItem('getB', setParam.boardTable[boardCnt-1].boardId +1);
+    localStorage.setItem('getB', boardCnt);
     location.href = "boardDt.html";
 });
 
