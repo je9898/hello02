@@ -24,6 +24,7 @@ function alliance(){
 function loginOut(){
     if (sessionStorage.getItem("loginData")){
         document.querySelector(".log_in").innerHTML = `<a href="#" class="log_in" onclick="logout()">Logout</a>`;
+        
     }
 }
 
