@@ -4,6 +4,8 @@ let userNo = 1;
 * 기능 : 화면 진입 시 바로 init() 호출
 */
 let setParam = {};
+let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+
 function init(){
     console.log("init : basket.js !")
     //localStorage 데이터 받아 쓰기 (setParam 에 저장)
@@ -86,7 +88,7 @@ function makeBasketInfo(){
             }
         });
     }
-
+    localStorage.setItem(loginData.id,allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
 }
 
 function PlusMinus(i,type){
@@ -107,14 +109,17 @@ function PlusMinus(i,type){
     if(couponYN){
         price2.innerHTML = (allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
         price3.innerHTML = (allPrice - allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+        localStorage.setItem(loginData.id,(allPrice - allPrice/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
     }else{
         price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
+        localStorage.setItem(loginData.id,allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
     }
     dataFunc(parseInt(cnt.value),i);
+
+
 }
 
 function dataFunc(cnt,i){
-
     console.log("func : dataFunc() !")
 
     setParam.basket[i].cnt = cnt;
@@ -349,6 +354,7 @@ function goNext(link){
             }
             setParam.order = order;
             localStorage.setItem("setParam",JSON.stringify(setParam));
+
             location.href = link + ".html";
         }
     }else{
