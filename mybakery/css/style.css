@@ -342,6 +342,7 @@ ol {
   width: 250px;
   margin-top: 20px;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .header__top__left {
@@ -4157,4 +4158,8 @@ margin-right: 20%;
 .menuImgs{
   border: 3px solid rgb(130, 130, 90);
   border-radius: 10px ;
+}
+/*수정*/
+input{
+  border-radius: 15px;
 }
