@@ -43,8 +43,8 @@ function adBtn() {
     new daum.Postcode( {
       oncomplete: function( data ) {
         document.getElementById( 'inPost' ).value = data.zonecode;
-        document.getElementById( 'crAd2' ).value = data.address;
-        document.getElementById( 'crAd2' ).focus();
+        document.getElementById( 'inAdr2' ).value = data.address;
+        document.getElementById( 'inAdr' ).focus();
       }
     } ).open();
   }
