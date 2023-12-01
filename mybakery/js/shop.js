@@ -1,8 +1,9 @@
 let setParam = {};
 setParam = JSON.parse(localStorage.setParam || "{}");
 //localStorage 데이터 받아 쓰기 (setParam 에 저장)
+console.log(setParam);
 
-let clickRes = [];  //몇번째 친구에 검색어가 포함되어 있는지 저장
+// let clickRes = [];  //몇번째 친구에 검색어가 포함되어 있는지 저장
 
 //메뉴 데이터 불러오는 함수
 function makeImg() {
@@ -11,22 +12,22 @@ function makeImg() {
     for (let i = 0; i < setParam.menuTable.length; i++) {
         html = "<div class='col-lg-3 col-md-6 col-sm-6'>" +
             "    <div class='product__item'>" +
-            "        <div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(../img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
+            "        <div class='product__item__pic set-bg menuImgs' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
             "            <div class='product__label'>" +
             "                <span>" + setParam.menuTable[i].mnuca + "</span>" +
             "            </div>" +
             "        </div>" +
             "        <div class='product__item__text'>" +
-            "            <h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
+            "            <h6><a href='javascript:void(0);'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
             "            <div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
             "            <div class='cart_add'>" + 
-            // "                <a href='http://192.168.219.50:5502/shopDt.html'>자세히 보기</a>" +
+            "                <a href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ")'>자세히 보기</a>" +
             //이 부분도 함수값 넣어서 해당하는 메뉴가 나오도록 해야 함//
             "            </div>" +
             "        </div>" +
             "    </div>" +
             "</div>";
-        makeImgDiv.innerHTML += html;
+        makeImgDiv.innerHTML += html;   
     }
 }
 
@@ -47,10 +48,10 @@ function makeMenu(type){
             "            </div>" +
             "        </div>" +
             "        <div class='product__item__text'>" +
-            "            <h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
+            "            <h6><a href='javascript:void(0);'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
             "            <div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
             "            <div class='cart_add'>" + 
-            // "                <a href='http://192.168.219.50:5502/shopDt.html'>자세히 보기</a>" +
+            "                <a href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ")' >자세히 보기</a>" +
             //이 부분도 함수값 넣어서 해당하는 메뉴가 나오도록 해야 함//
             "            </div>" +
             "        </div>" +
@@ -60,6 +61,12 @@ function makeMenu(type){
             makeImgDiv.innerHTML += html;
         }
     }
+}
+
+function gomenuDt(mnuId){
+    console.log(mnuId)
+    localStorage.setItem("nextMenuId",mnuId);
+    location.href="shopDt.html";
 }
 
 //메뉴 데이터
@@ -306,4 +313,4 @@ function myFunc() {
 
 
 myFunc();
-makeImg();
+makeImg(); 
