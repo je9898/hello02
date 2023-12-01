@@ -196,3 +196,6 @@ table {
   padding : 15px;
 }
 
+.boardSize{
+  width: 500px;
+}
