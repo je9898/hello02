@@ -1,24 +1,11 @@
 let setParam ={};
-function init(){
-    console.log("init : eventTable.js !");
-    setParam = (localStorage.setParam || {}); //JSON.parse
-    console.log(setParam);
-}
+let cnt = 1;
+let numberButton;
 
-setParam.eventTable = eventTable;
+setParam = JSON.parse(localStorage.setParam || "{}");
 console.log(setParam);
 
-let eData= setParam.eventTable;
-/* 
-<tr>
-    <td>1</td>
-    <th>
-    <a href="#!">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
-    <p>테스트</p>
-    </th>
-    <td>2017.07.13</td>
-</tr>
-*/
+let eData= setParam.eventTable || [];
 
 const COUNT_PER_PAGE = 5;
 const totalPageCount = () => {
@@ -26,9 +13,13 @@ const totalPageCount = () => {
    };
 
 let html = "";
-
+let tbody = document.querySelector("tbody");
 function setPageOf(count){
-    let tbody = document.querySelector("tbody");
+    if(eData.length === 0){
+        return;
+    }
+    cnt = count;
+
     tbody.innerHTML = "";
     for(i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){
         html = "<tr>" +
@@ -40,8 +31,8 @@ function setPageOf(count){
                 "    <td>"+ eData[i].upDa +"</td>" +
                 "</tr>" 
                 tbody.innerHTML += html;
-    }}
-
+    }
+}
 
       
 function title_btn(i){
@@ -55,13 +46,29 @@ const pageBtn = document.querySelector('.nuBtn');
 
 
 const setPageBtn = () => {
+
+    if(eData.length === 0){
+        let eventTable = document.querySelector(".board-table");
+        eventTable.innerHTML = "<h3 id='noEvent'>리스트가 비었습니다.</h3>";
+        return;
+    }
+
     pageBtn.innerHTML = '';
     for(let i = 1; i <= totalPageCount(); i++){
     pageBtn.innerHTML +=  `<span class="number-button" onclick="setPageOf(${i})" > ${i} </span`; 
       }
     };
+
+let admin = document.querySelector("#admin2");
+admin.addEventListener("dblclick",function (){
+    let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+    if(loginData.admin === 1){
+        if(confirm("MAKE BOARD")){
+            location.href = "makeBoard.html";
+        }
+    }
+}); 
     
 setPageBtn();
-setPageOf(1); // 첫페이지 첫진입
-init();
+setPageOf(cnt); // 첫페이지 첫진입
 
