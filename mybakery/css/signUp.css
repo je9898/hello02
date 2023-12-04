@@ -95,3 +95,8 @@
   input:focus{
     border: 2px solid #fdd8a0;
   }
+
+  .testbtn:active,
+  #btn_zip_code:active {
+    background-color: rgb(233, 233, 233);
+  }

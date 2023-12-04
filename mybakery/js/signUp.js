@@ -51,8 +51,15 @@ function zipCodeSearch() {
         const payment = document.querySelector("#payment").checked;
         const paypal = document.querySelector("#paypal").checked;
 
+        const expName = /^[가-힣]+$/;
+        const expId = /^[A-Za-z]{3,20}$/;
+        const expPhone = /^\d{3}-\d{3,4}-\d{4}$/;
+        const expEmail = /^[A-Za-z-0-9\-\.]+@[A-Ja-z-0-9\-\.]+\.[A-Ja-z-0-9]+$/;
+
         if(!username.value) return alert("이름을 입력 해주세요");
+        if(!expName.test(username.value)) return alert("이름은 한글로 입력 해주세요.");
         if(!userId.value) return alert("아이디를 입력 해주세요");
+        if(!expId.test(userId.value)) return alert('아이디는 3자 이상 20자 이하의 대소문자로 시작하는 조합 입니다.');
         if(checkUserId()) return alert("중복된 아이디 입니다.");
         if(!userPw.value) return alert("비밀번호 확인이 틀립니다.");
         if(!userPwCheck.value) return alert("비밀번호 확인이 틀립니다.");
@@ -61,7 +68,9 @@ function zipCodeSearch() {
         if(!userAdress.value) return alert("주소를 입력 해주세요.");
         if(!userAdressDetails.value) return alert("상세주소를 입력 해주세요.");
         if(!userPhone.value) return alert("전화번호를 입력 해주세요.");
+        if(!expPhone.test(userPhone.value)) return alert('휴대폰 번호 형식을 확인하세요. \n하이픈(-)을 포함해야 합니다.');
         if(!userEmail.value) return alert("이메일을 입력 해주세요.");
+        if(!expEmail.test(userEmail.value)) return alert('이메일 형식이 잘못됐습니다. \n예) Mybakery@support.com');
         if(!accOr) return alert("약관에 동의 해주세요.");
         if(!payment) return alert("약관에 동의 해주세요.");
         if(!paypal) return alert("약관에 동의 해주세요.");
