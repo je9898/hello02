@@ -67,8 +67,8 @@ function makeBasketInfo(){
             price1.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
             price3.innerHTML = allPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원";
         }
-        tbody.innerHTML += html;
     }
+    tbody.innerHTML += html;
 
     /*삭제버튼 이벤트*/
     let close = document.querySelectorAll(".icon_close");
