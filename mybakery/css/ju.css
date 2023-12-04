@@ -18,10 +18,12 @@
   
   /* 메뉴 사이즈 조정 */
   .product__item__pic {
-    width: 400px;
+    width: auto;
     background-position: center;
     position: relative;
     object-fit: none;
+    border: 3px solid rgb(130, 130, 90);
+    border-radius: 10px;
   }
 
  
@@ -48,3 +50,16 @@
     padding-bottom: 180px;
   }
   
+  /* .product__item {
+    margin-bottom: 40px;
+    position: relative;
+    background-position: center;
+  } */
+
+  /* 메뉴 뿌려주는 판 패딩작업 */
+  .menuspad{
+    padding-top: 3px;
+    padding-bottom: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }

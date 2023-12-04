@@ -80,6 +80,8 @@ p {
 
 img {
   max-width: 100%;
+  border: 3px solid rgb(130, 130, 90);
+  border-radius: 10px;
 }
 
 input:focus,
@@ -1115,6 +1117,7 @@ ol {
 
 .product__item {
   margin-bottom: 40px;
+
 }
 .product__item:hover .product__item__pic .product__label span {
   background: #f08632;

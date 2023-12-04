@@ -12,11 +12,12 @@ function makeImg() {
     
 
     for (let i = 0; i < setParam.menuTable.length; i++) {
-        html = "<div class='col-lg-3 col-md-6 col-sm-6'>" +
-            "    <div class='product__item'>" +
-            "        <div class='product__item__pic set-bg menuImgs' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
-            "            <div class='product__label'>" +
-            "                <span>" + setParam.menuTable[i].mnuca + "</span>" +
+        html = 
+            "<div class='col-lg-3 col-md-6 col-sm-6'>" +
+            "       <div class='product__item'>" +
+            "           <div class='product__item__pic set-bg menuImgs' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
+            "               <div class='product__label'>" +
+            "                   <span>" + setParam.menuTable[i].mnuca + "</span>" +
             "            </div>" +
             "        </div>" +
             "        <div class='product__item__text'>" +
