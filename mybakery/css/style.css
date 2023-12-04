@@ -80,7 +80,6 @@ p {
 
 img {
   max-width: 100%;
-  border: 3px solid rgb(130, 130, 90);
   border-radius: 10px;
 }
 
@@ -154,13 +153,14 @@ ol {
 /* buttons */
 .primary-btn {
   display: inline-block;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   padding: 14px 30px;
-  color: #ffffff;
-  background: #f08632;
+  color: #000000;
+  background: #fdf1a0;
   letter-spacing: 2px;
+  border-radius: 20px;
 }
 
 .site-btn {
@@ -725,7 +725,7 @@ ol {
   transition: all, 0.3s;
 }
 .categories__item:hover {
-  background: #f08632;
+  background: #f08632 ;
 }
 .categories__item:hover:after {
   opacity: 1;

@@ -41,20 +41,15 @@
     width: 150px;
     border: 1px solid #e1e1e1;
     padding: 0 20px;
-    
+    background-color: #ffffff;
   }
 
   /* 패딩 바텀 늘림 */
   .product-details {
     padding-top: 90px;
-    padding-bottom: 180px;
+    padding-bottom: 60px;
+
   }
-  
-  /* .product__item {
-    margin-bottom: 40px;
-    position: relative;
-    background-position: center;
-  } */
 
   /* 메뉴 뿌려주는 판 패딩작업 */
   .menuspad{
@@ -62,4 +57,9 @@
     padding-bottom: 20px;
     padding-left: 15%;
     padding-right: 15%;
+  }
+
+  .font_color{  
+    color: #000000;
+    
   }
