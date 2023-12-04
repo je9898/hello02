@@ -109,3 +109,10 @@
 .sec_cal .cal_wrap .day.disable {
     color: #ddd;
 }
+.cal-col{
+    color: #000;
+}
+
+.cal-col:hover{
+    cursor:pointer ;
+}
