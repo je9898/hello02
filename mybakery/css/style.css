@@ -858,10 +858,13 @@ ol {
 .team__btn {
   text-align: right;
 }
+/*kim24 수정*/
 .team__btn .primary-btn {
-  border: 2px solid #b7b7b7;
-  background: transparent;
+  background: #fdf1a0;
   color: #111111;
+  border-radius: 15px;
+  height: 50px;
+  padding-top: 17px;
 }
 
 .team__item {
