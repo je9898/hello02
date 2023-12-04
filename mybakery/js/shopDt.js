@@ -62,10 +62,8 @@ function afterAdd(){
     }
 }
 
-    ///////////////////////////////////////////////////
-    //구성은 해뒀고 출력도 되는 것 같은데 html에 안 뿌려짐.
     //가능하면 내가 누른 메뉴는 안 뜨도록 if문 수정해보자.(mnuId 사용하면 될 듯?)
-    ///////////////////////////////////////////////////
+
 function makeRelate(){
     let html = "";
     let makeRelateDiv = document.querySelector("#makeRelateDiv");
@@ -73,7 +71,6 @@ function makeRelate(){
     for (let i = 0; i < setParam.menuTable.length; i++) {
         if (setParam.menuTable[i].mnuca == DT2){
         html =
-        // "<div class='related__products__slider owl-carousel'>" +
             "<div class='col-lg-3'>" +
                 "<div class='product__item'>" +
                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
@@ -84,11 +81,13 @@ function makeRelate(){
                     "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
                     "<div class='cart_add'>" + "<a href='#'>" + 'Add to cart' + "</a>" + "</div>" +     
                 "</div>"
-                // + "</div>"
-       
+
         makeRelateDiv.innerHTML += html;
         console.log(html);
         }
+        // else if (setParam.menuTable[i].mnuId === DT1){
+        //     location.href="index.html"
+        // }
     }      
 }
 
