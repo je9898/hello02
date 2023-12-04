@@ -20,14 +20,14 @@ function setPageOf(count){
     cnt = count;
 
     tbody.innerHTML = "";
-    console.log(bData)
-    debugger;
-    for(i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){
-        if(bData[i].kate = 1){
-            bData[i].kate = "이벤트"
-            }else{
-            bData[i].kate = "공지사항"   
-            }
+    for(let i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count -1; i++){
+        let kate;
+        console.log(bData[i])
+        if(bData[i].kate === "1"){
+            kate = "이벤트"
+        }else{
+            kate = "공지사항"
+        }
         html = "<tr>" +
                 "    <td>"+(bData[i].boardId+1)+"</td>" +
                 "    <th>" +
@@ -35,15 +35,20 @@ function setPageOf(count){
                 "    <p>테스트</p>" +
                 "    </th>" +
                 "    <td>"+ bData[i].upDa +"</td>" +
-                "    <td>"+ bData[i].kate +"</td>" +
+                "    <td>"+ kate +"</td>" +
                 "</tr>" 
                 tbody.innerHTML += html;}
         }
 
 function title_btn(i){
-    localStorage.setItem('getB', bData[i].boardId);
-    location.href ='boardDt.html';
-    console.log(bData[i]);
+    sessionStorage.setItem('getB', JSON.stringify(bData[i]));
+
+    if(bData[i].kate === "1"){
+        location.href ='eventDt.html';
+    }else{
+        location.href ='boardDt.html';
+    }
+
 }
    
 
