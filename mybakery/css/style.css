@@ -667,6 +667,9 @@ ol {
   right: 30px;
 }
 
+.hero__slider:hover{
+  cursor: pointer;
+}
 /*---------------------
   Categories
 -----------------------*/
@@ -1679,7 +1682,7 @@ ol {
 -----------------------*/
 .product-details {
   padding-top: 90px;
-  padding-bottom: 150px;
+  padding-bottom: 0;
 }
 
 .product__details__big__img {
@@ -1756,7 +1759,7 @@ ol {
 }
 .product__details__option .pro-qty {
   height: 50px;
-  width: 150px;
+  width: 140px;
   border: 1px solid #e1e1e1;
   padding: 0 20px;
 }
@@ -1767,7 +1770,6 @@ ol {
   line-height: 48px;
   cursor: pointer;
   font-weight: 600;
-  background-color: #ffffff;
 }
 .product__details__option .pro-qty .qtybtn.dec {
   color: #888888;
