@@ -1,40 +1,36 @@
 const imgDiv = document.querySelector('.eventImg');
-//const eventImg = document.querySelector(".eventImg")
-
-
-
-
-//의 데이를 a 에 가져와서 담는다.
-
-var getE = localStorage.getItem("getE");
-let NB=""; //"" : 초기진입, "N" : 다음, "B" : 이전 
-let point; //이미지 출력을 위한 변수 선언
-console.log(getE);
-//이벤트 포스터 출력 함수
-function showE(NB){
-    localStorage.getItem("getE");
-    point = getE;
-    console.log(point);
-    if(NB === "N"){
-       eventImg.innerHTML= point = getE +1; 
-        //다음 페이지 이동
-    }else if(NB==="B"){
-        point = getE -1;
-        //이전 페이지 이동
+let getB = JSON.parse(sessionStorage.getItem("getB"));
+let getBCnt = getB.boardId;
+function evChange(NB){  //초기진입 : "F", 이전 : "B", 다음 : "N"
+    let imgURL;
+    console.log(getBCnt);
+    if(getBCnt < 0){
+        alert("이전글이 없습니다.")
+        return;
     }
-    var eventImg = document.createElement('img');
-    var imgURL = 'img/event/event-' + point +'.png';
+    imgDiv.innerHTML = "";
+    
+    if(NB === "N"){
+        getBCnt = getBCnt+1;
+        imgURL = 'img/event/event-' + getBCnt +'.png';
+    }else if(NB==="B"){
+        getBCnt = getBCnt-1;
+        imgURL = 'img/event/event-' + getBCnt +'.png';
+    }else if (NB==="F"){
+        imgURL = 'img/event/event-' + getBCnt +'.png';
+    }else{
+        alert("비 정상적인 접근입니다.")
+        return;
+    }
+    let eventImg = document.createElement('img');
     eventImg.src = imgURL;
     eventImg.classList.add('img-fluid');
     imgDiv.appendChild(eventImg);
 }
 
+function goBoard(){
+    location.href = "board.html";
 
-
-function evChange(e) {
-    NB=e;
-    showE(NB);
 }
 
-
-showE()
+evChange("F")

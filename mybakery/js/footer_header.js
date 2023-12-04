@@ -5,13 +5,20 @@ fetch("header.html").then(function response(response){
     let link = JSON.stringify(window.location.pathname).split('/');
     console.log(link[link.length-1].replaceAll(".html\"",""))
     let linkName = link[link.length-1].replaceAll(".html\"","");
+    if(linkName === "boardDt" || linkName === "eventDt"){
+        linkName = "board"
+    }
     document.querySelector("#"+linkName).setAttribute("class","active");
 
     if(sessionStorage.getItem("loginData")){
         let loginData = JSON.parse(sessionStorage.getItem("loginData"));
         let price = document.querySelector("#price");
         let id = loginData.id;
-        price.innerHTML = localStorage.getItem(id) + "원";
+        if(localStorage.getItem(id) === null){
+            price.innerHTML = "0원";
+        }else{
+            price.innerHTML = localStorage.getItem(id) + "원";
+        }
     }
 
 
@@ -47,11 +54,15 @@ function logout() {
 
 function goBasket(){
     if (!sessionStorage.getItem("loginData")){
+        alert("로그인이 필요합니다.")
         location.href="login.html";
     }else{
         location.href="basket.html";
     }
 }
 
-
+function shopKate(kate){
+    sessionStorage.setItem("sessionKate",kate);
+    location.href="shop.html";
+}
 

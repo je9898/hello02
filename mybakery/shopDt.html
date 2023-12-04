@@ -90,20 +90,18 @@
                         <!-- 상세설명 -->
                         <p class="product_infor"></p>
                         <ul>    
-                            <!-- 재고 -->
-                            <li>SKU: <span class="product_sku"></span></li>
-                            <!-- 카테고리 -->
-                            <li>Category: <span class="product_label"></span></li>
+                        <!-- 카테고리 -->
+                        <li>Category: <span class="product_label"></span></li>
                         </ul>
                         <div class="product__details__option">
                             <div class="quantity">
                                 <div class="pro-qty">
-                                    <input type="text" value="2">
+                                    <input type="text" class="product_qty" value="1">
                                 </div>
                             </div>
                             <!-- 데이터 보내기 -->
-                            <div class="basket_Btn" onclick="addMenu()"></div>
-                            <button type="button" class="primary-btn" >장바구니에 담기</button>
+                            <div class="basket_Btn"></div>
+                            <button type="button" class="primary-btn" onclick="addMenu()">장바구니에 담기</button>
                         </div>
                     </div>
                 </div>
@@ -111,12 +109,12 @@
         </div>
     </section>
     <!-- Shop Details Section End -->
-    
+
     <!-- Related Products Section Begin -->
-    <div class="row" id="makeRealateDiv">
-            
-    </div>
-    <!-- <section class="related-products spad">
+
+    <!-- <div class="row" id="makeRelateDiv"></div> -->
+
+    <section class="related-products spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -125,8 +123,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="related__products__slider owl-carousel">
+            <div class="row" id = "makeRelateDiv">
+                <!-- <div class="related__products__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="product__item">
                             <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
@@ -143,10 +141,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Related Products Section End -->
 
 
@@ -167,8 +165,8 @@
 <script src="js/main.js"></script>
 <script src="js/shopDt.js"></script>
 <script src="js/footer_header.js"></script>
-<!-- 
-<script>
+
+<!-- <script>
     document.addEventListener('DOMContentLoaded'); //클릭 이벤트 버튼 활성화
 </script> -->
 </body>

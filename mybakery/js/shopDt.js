@@ -1,12 +1,13 @@
-// mnuId값 가져오기
-// let steal = localStorage.getItem("nextMenuId");
-// console.log(steal)
-
 let DT = JSON.stringify(window.location.href).split('?');
 console.log(DT)
 let DT1 = DT[1].replaceAll("\"","");
 let DT2 = DT[2].replaceAll("\"","");
+let product_qty = document.querySelector(".product_qty")
+let dtQty = product_qty.value
 
+let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+console.log("loginData")
+let userNo = 1;
 DT2 = decodeURI(DT2);
 
 console.log(DT1 + " / " + DT2)
@@ -16,7 +17,7 @@ let dtName=""
 let dtPrice=""
 let dtCate=""
 let dtInfo=""
-let dtSku=""
+let spPrice=""
 let dtImg="<img class='product_details_big_img' src='img/menuImg/img_" + DT1 + ".PNG' style='background-image: url(img/menuImg/img_" + DT1 + ".PNG)'>" + "</img>"
 
 //menuTable 자료 뿌려주기
@@ -24,11 +25,6 @@ let setParam = {};
 setParam = JSON.parse(localStorage.setParam || "{}");
 //localStorage 데이터 받아 쓰기 (setParam 에 저장)
 console.log(setParam);
-
-function addMenu(){
-    //현재 디테일 상품에 있는 정보를 보내주는 역할
-}
-
 
 //detail 파트에 저장해둔 Id값과 일치하는 항목 뿌려주기
 for (let i = 0; i < setParam.menuTable.length; i++) {
@@ -38,82 +34,78 @@ for (let i = 0; i < setParam.menuTable.length; i++) {
         dtName = setParam.menuTable[i].mnuNa
         dtCate = setParam.menuTable[i].mnuca
         dtInfo = setParam.menuTable[i].mnuInfo
-        dtSku = setParam.menuTable[i].sku
         dtPrice = setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원'
-        
-
-        console.log(setParam.menuTable[i].sku)
+        spPrice = setParam.menuTable[i].price
     }
 }
 
-// function makeRealate(){
-//     let html = "";
-//     console.log(1)
-//     let makeRealateDiv = document.querySelector("#makeRealateDiv");
-//     setParam.menuTable[i].mnuca
-//     for (let i = 0; i < setParam.menuTable.length; i++) {
-//         html = "<div class='row'>" +
-//         "<div class='related__products__slider owl-carousel'>" +
-//             "<div class='col-lg-3'>" +
-//                 "<div class='product__item'>" +
-//                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
-//                         "<div class='product__label'>" +
-//                             "<span>" + setParam.menuTable[i].mnuca + "</span>" +
-//                                 "</div>" +
-//                                   "</div>" +    
-//                                     "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
-//                                 "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
-//                             "<div class='cart_add'>" +
-//                         "<a href='#'>" + 'Add to cart' + "</a>" +
-//                             "</div>" +
-//                         "</div>" +
-//                     "</div>" +
-//                 "</div>" +
-//             "</div>" +
-//         "</div>"
-//             const dsad = setParam.menuTable[i].mnuca;
-//             makeRealateDiv.innerHTML += html;
-//         if (dsad == DT2) {
-//             console.log(setParam.menuTable[i].mnuca)
-            
-            // menuTable[2].
-        // html = "<div class='row'>" +
-        // "<div class='related__products__slider owl-carousel'>" +
-        //     "<div class='col-lg-3'>" +
-        //         "<div class='product__item'>" +
-        //             "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" +
-        //                 "<div class='product__label'>" +
-        //                     "<span>" + setParam.menuTable[i].mnuca + "</span>" +
-        //                         "</div>" +
-        //                           "</div>" +    
-        //                             "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
-        //                         "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
-        //                     "<div class='cart_add'>" +
-        //                 "<a href='#'>" + 'Add to cart' + "</a>" +
-        //                     "</div>" +
-        //                 "</div>" +
-        //             "</div>" +
-        //         "</div>" +
-        //     "</div>" +
-        // "</div>"
-        //     makeRealateDiv.innerHTML += html;
-//         }
-//     }
-// }
+function addMenu(){
+   let addBasket = {
+        userNo : 1,
+        mnuId :  parseInt(DT1),
+        mnuNa : dtName,
+        price : parseInt(spPrice),
+        cnt : parseInt(product_qty.value)
+    }
 
-// makeRealate();
+let basket = setParam.basket || [];
+basket.push(addBasket);
+setParam.basket = basket;
+console.log(setParam)
+afterAdd();
+localStorage.setItem("setParam",JSON.stringify(setParam))
+}
+
+function afterAdd(){
+	console.log(1)
+	if(confirm("장바구니를 확인하시겠습니까?")){
+		location.href = "basket.html";
+	}else{
+        location.href = "shop.html";
+    }
+}
+
+    ///////////////////////////////////////////////////
+    //구성은 해뒀고 출력도 되는 것 같은데 html에 안 뿌려짐.
+    //가능하면 내가 누른 메뉴는 안 뜨도록 if문 수정해보자.(mnuId 사용하면 될 듯?)
+    ///////////////////////////////////////////////////
+function makeRelate(){
+    let html = "";
+    let makeRelateDiv = document.querySelector("#makeRelateDiv");
+
+    for (let i = 0; i < setParam.menuTable.length; i++) {
+        if (setParam.menuTable[i].mnuca == DT2){
+        html =
+        // "<div class='related__products__slider owl-carousel'>" +
+            "<div class='col-lg-3'>" +
+                "<div class='product__item'>" +
+                    "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
+                        //이 부분 클래스를 span으로 묶는 게 좋은 건지 아니면 이렇게 둬도 되는지
+                    "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
+                        //위의 질문에 답변에 따라 얘도 맞추기
+                    "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
+                    "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
+                    "<div class='cart_add'>" + "<a href='#'>" + 'Add to cart' + "</a>" + "</div>" +     
+                "</div>"
+                // + "</div>"
+       
+        makeRelateDiv.innerHTML += html;
+        console.log(html);
+        }
+    }      
+}
+
+makeRelate();
 
 //product_name이라는 class를 쓰는 html 구문을 가져와서 varName이라는 변수 안에 넣겠다
 let varName = document.querySelector(".product_name")
 let varlabel = document.querySelector(".product_label")
 let varprice = document.querySelector(".product_price")
 let varinfor = document.querySelector(".product_infor")
-let varsku = document.querySelector(".product_sku")
 let varimg = document.querySelector(".product_details_big_img")
 
 varName.innerHTML=dtName
 varlabel.innerHTML=dtCate
 varprice.innerHTML=dtPrice
 varinfor.innerHTML=dtInfo
-varsku.innerHTML=dtSku.toString()
 varimg.innerHTML=dtImg
