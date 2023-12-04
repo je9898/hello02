@@ -38,7 +38,7 @@ for (let i = 0; i < setParam.menuTable.length; i++) {
 
 function addMenu(){
    let addBasket = {
-        userNo : 1,
+        userNo : loginData.userNo,
         mnuId :  parseInt(DT1),
         mnuNa : dtName,
         price : parseInt(spPrice),

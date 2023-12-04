@@ -9,6 +9,8 @@ fetch("header.html").then(function response(response){
         linkName = "board"
     }else if(linkName === "login" || linkName === "signUp") {
         linkName = "index"
+    }else if (linkName === "shopDt"){
+        linkName = "shop"
     }
     document.querySelector("#"+linkName).setAttribute("class","active");
 
