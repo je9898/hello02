@@ -22,7 +22,6 @@
     background-position: center;
     position: relative;
     object-fit: none;
-    margin-left: 100px;
   }
 
  
@@ -33,4 +32,19 @@
     font-weight: 700;
     font-style: italic;
   } 
+
+  /* 버튼태그 와이드 늘려주기 */
+  .product__details__option .pro-qty {
+    height: 50px;
+    width: 150px;
+    border: 1px solid #e1e1e1;
+    padding: 0 20px;
+    
+  }
+
+  /* 패딩 바텀 늘림 */
+  .product-details {
+    padding-top: 90px;
+    padding-bottom: 180px;
+  }
   

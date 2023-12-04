@@ -1762,6 +1762,7 @@ ol {
   width: 140px;
   border: 1px solid #e1e1e1;
   padding: 0 20px;
+  
 }
 .product__details__option .pro-qty .qtybtn {
   font-size: 16px;
@@ -1859,17 +1860,17 @@ ol {
 .related__products__slider.owl-carousel .col-lg-3 {
   max-width: 100%;
 }
-.related__products__slider.owl-carousel .owl-nav button {
+/* .related__products__slider.owl-carousel .owl-nav button {
   font-size: 30px;
   color: #888888;
   position: absolute;
   left: -44px;
   top: 28%;
-}
-.related__products__slider.owl-carousel .owl-nav button.owl-next {
+} */
+/* .related__products__slider.owl-carousel .owl-nav button.owl-next {
   left: auto;
   right: -44px;
-}
+} */
 
 /*---------------------
   Shopping Cart
