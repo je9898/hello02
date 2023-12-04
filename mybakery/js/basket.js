@@ -34,6 +34,7 @@ function makeBasketInfo(){
     }
     
     for(let i=0; i<setParam.basket.length; i++){
+        console.log(userNo);
         if(setParam.basket[i].userNo === user){
             html += "   <tr class='cart-main'>" +
                 "        <td class='product__cart__item'>" +
