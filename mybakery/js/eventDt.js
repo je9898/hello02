@@ -4,7 +4,7 @@ let getBCnt = getB.boardId;
 function evChange(NB){  //초기진입 : "F", 이전 : "B", 다음 : "N"
     let imgURL;
     console.log(getBCnt);
-    if(getBCnt === 0){
+    if(getBCnt < 0){
         alert("이전글이 없습니다.")
         return;
     }

@@ -60,5 +60,8 @@ function goBasket(){
     }
 }
 
-
+function shopKate(kate){
+    sessionStorage.setItem("sessionKate",kate);
+    location.href="shop.html";
+}
 
