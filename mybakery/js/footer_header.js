@@ -11,6 +11,8 @@ fetch("header.html").then(function response(response){
         linkName = "index"
     }else if (linkName === "shopDt"){
         linkName = "shop"
+    }else if(linkName === "order"){
+        linkName = "basket"
     }
     document.querySelector("#"+linkName).setAttribute("class","active");
 

@@ -3,24 +3,6 @@
 * 기능 : 화면 진입 시 바로 init() 호출
 */
 function init(){
-    console.log("init : basket.js !")
-    fetch("footer.html")
-        .then(function response(response){
-            return response.text()
-        })
-        .then(function data (data) {
-            document.querySelector("footer").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
-        });
-
-
-    fetch("header.html")
-        .then(function response(response){
-            return response.text()
-        })
-        .then(function data (data) {
-            document.querySelector("header").innerHTML += data; /* '= '-> '+='로 변경 엎어치기 x*/
-        });
-    console.log(setParam)
 
     makeOrderInfo();
 }
@@ -51,6 +33,7 @@ function makeOrderInfo(){
 
         tbody.innerHTML += html;
     }
+    
 }
 
 function addBasket(index){
