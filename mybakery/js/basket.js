@@ -1,29 +1,17 @@
-let userNo = 1;
 /*
 * 기능 : localStorage 데이터 전달받기
 * 기능 : 화면 진입 시 바로 init() 호출
 */
 let setParam = {};
 let loginData = JSON.parse(sessionStorage.getItem("loginData"));
+let userNo = loginData.userNo;
 
 function init(){
     console.log("init : basket.js !")
     //localStorage 데이터 받아 쓰기 (setParam 에 저장)
     setParam = JSON.parse(localStorage.setParam || "{}");
-    console.log(localStorage.setParam)
     //localStorage 데이터 받아 쓰기 (setParam 에 저장)
-
-    //test
-    testFunc();
-    //test
-    setParam.userNo = userNo;
-
-    //localStorage 데이터 올리기 (JSON.stringify(setParam)를 setParam이름으로 )
-    localStorage.setItem("setParam",JSON.stringify(setParam));
-    //localStorage 데이터 올리기 (JSON.stringify(setParam)를 setParam이름으로 )
-
     console.log(setParam)
-
     makeBasketInfo();
 }
 
@@ -35,12 +23,21 @@ const mainI = [];   //1234 순번대로 그려지는게 아니기때문에 해�
 
 function makeBasketInfo(){
     console.log("func : makeBasketInfo() !")
+    
+    
     /* 장바구니 상세정보 그려 */
     let user = userNo;
     let tbody = document.querySelector("tbody");
     tbody.innerHTML = "";
+    let html = "";
+
+    /*방어로직*/
+    if(setParam.basket === null || setParam.basket === undefined || setParam.basket ===[]){
+        tbody.innerHTML += "장바구니 내역이 없습니다.";
+        return;
+    }
+    
     for(let i=0; i<setParam.basket.length; i++){
-        let html = "";
         if(setParam.basket[i].userNo === user){
             html += "   <tr class='cart-main'>" +
                 "        <td class='product__cart__item'>" +
@@ -348,7 +345,7 @@ function goNext(link){
         if(confirm("주문 하시겠습니까?")){
             let order = [];
             for(let i=0; i<setParam.basket.length; i++){
-                if(setParam.basket[i].userNo === setParam.userNo){
+                if(setParam.basket[i].userNo === loginData.userNo){
                     order.push(setParam.basket[i]);
                 }
             }

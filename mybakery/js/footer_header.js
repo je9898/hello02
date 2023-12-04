@@ -11,7 +11,11 @@ fetch("header.html").then(function response(response){
         let loginData = JSON.parse(sessionStorage.getItem("loginData"));
         let price = document.querySelector("#price");
         let id = loginData.id;
-        price.innerHTML = localStorage.getItem(id) + "원";
+        if(localStorage.getItem(id) === null){
+            price.innerHTML = "내역없음";
+        }else{
+            price.innerHTML = localStorage.getItem(id) + "원";
+        }
     }
 
 
