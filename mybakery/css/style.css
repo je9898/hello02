@@ -80,7 +80,6 @@ p {
 
 img {
   max-width: 100%;
-  border-radius: 10px;
 }
 
 input:focus,
@@ -4220,4 +4219,11 @@ input{
 }
 .footer__widget{
   justify-content: center;
+}
+
+.product_details_big_img{
+  border: 3px solid #82825a;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
 }
