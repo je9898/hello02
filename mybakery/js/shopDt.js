@@ -20,6 +20,7 @@ let dtInfo=""
 let spPrice=""
 let dtImg="<img class='product_details_big_img' src='img/menuImg/img_" + DT1 + ".PNG' style='background-image: url(img/menuImg/img_" + DT1 + ".PNG)'>" + "</img>"
 
+
 //menuTable 자료 뿌려주기
 console.log(setParam);
 
@@ -79,20 +80,24 @@ function makeRelate(){
             "<div class='col-lg-3'>" +
                 "<div class='product__item'>" +
                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
-                      "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
-                    "<span>" + setParam.menuTable[i].mnuNa + "</span>" +
-                    // "<a href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ",\"" + setParam.menuTable[i].mnuca + "\")'>자세히 보기</a>"
+                    "<a class='font_color' href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ",\"" + setParam.menuTable[i].mnuca + "\")'>" + setParam.menuTable[i].mnuNa + "</a>" +
                     "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
                 "</div>"  +
             "</div>"  
 
+        
         makeRelateDiv.innerHTML += html;
         console.log(html);
         }
-        // else if (setParam.menuTable[i].mnuId === DT1){
-        //     location.href="index.html"
-        // }
     }      
+}
+
+function gomenuDt(mnuId, mnuca){
+    console.log(mnuId)
+    console.log(mnuca)
+    localStorage.setItem("nextMenuId",mnuId);
+    localStorage.setItem("nextMenuca",mnuca);
+    location.href="shopDt.html" + "?" + mnuId + "?" + mnuca;
 }
 
 makeRelate();
