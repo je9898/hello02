@@ -45,45 +45,57 @@ function addMenu(){
         mnuId :  parseInt(DT1),
         mnuNa : dtName,
         price : parseInt(spPrice),
-        cnt : parseInt(dtQty)
+        cnt : parseInt(product_qty.value)
     }
-localStorage.setItem("mybasket",JSON.stringify(addBasket))
-console.log(addBasket)
 
-location.href = "basket.html";
+let basket = setParam.basket || [];
+basket.push(addBasket);
+setParam.basket = basket;
+console.log(setParam)
+afterAdd();
+localStorage.setItem("setParam",JSON.stringify(setParam))
+}
+
+function afterAdd(){
+	console.log(1)
+	if(confirm("장바구니를 확인하시겠습니까?")){
+		location.href = "basket.html";
+	}else{
+        location.href = "shop.html";
+    }
 }
 
     ///////////////////////////////////////////////////
     //구성은 해뒀고 출력도 되는 것 같은데 html에 안 뿌려짐.
     //가능하면 내가 누른 메뉴는 안 뜨도록 if문 수정해보자.(mnuId 사용하면 될 듯?)
     ///////////////////////////////////////////////////
-// function makeRelate(){
-//     let html = "";
-//     let makeRelateDiv = document.querySelector("#makeRelateDiv");
+function makeRelate(){
+    let html = "";
+    let makeRelateDiv = document.querySelector("#makeRelateDiv");
 
-//     for (let i = 0; i < setParam.menuTable.length; i++) {
-//         if (setParam.menuTable[i].mnuca == DT2){
-//         html = "<div class='row'>" +
-//         "<div class='related__products__slider owl-carousel'>" +
-//             "<div class='col-lg-3'>" +
-//                 "<div class='product__item'>" +
-//                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
-//                         //이 부분 클래스를 span으로 묶는 게 좋은 건지 아니면 이렇게 둬도 되는지
-//                     "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
-//                         //위의 질문에 답변에 따라 얘도 맞추기
-//                     "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
-//                     "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
-//                     "<div class='cart_add'>" + "<a href='#'>" + 'Add to cart' + "</a>" + "</div>" +     
-//                 "</div>" +
-//             "</div>" +
-//         "</div>"
-//         makeRelateDiv.innerHTML += html;
-//         console.log(html);
-//         }
-//     }      
-// }
+    for (let i = 0; i < setParam.menuTable.length; i++) {
+        if (setParam.menuTable[i].mnuca == DT2){
+        html =
+        // "<div class='related__products__slider owl-carousel'>" +
+            "<div class='col-lg-3'>" +
+                "<div class='product__item'>" +
+                    "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
+                        //이 부분 클래스를 span으로 묶는 게 좋은 건지 아니면 이렇게 둬도 되는지
+                    "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
+                        //위의 질문에 답변에 따라 얘도 맞추기
+                    "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
+                    "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
+                    "<div class='cart_add'>" + "<a href='#'>" + 'Add to cart' + "</a>" + "</div>" +     
+                "</div>"
+                // + "</div>"
+       
+        makeRelateDiv.innerHTML += html;
+        console.log(html);
+        }
+    }      
+}
 
-// makeRelate();
+makeRelate();
 
 //product_name이라는 class를 쓰는 html 구문을 가져와서 varName이라는 변수 안에 넣겠다
 let varName = document.querySelector(".product_name")
