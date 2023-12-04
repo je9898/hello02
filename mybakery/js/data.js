@@ -17,12 +17,6 @@ const cruTable= [
 const boardTable = [
     
 ]
-
-/*이벤트 데이터*/
-const eventTable = [
-    
-]
-
 /*메뉴 데이터*/
 let menuTable = [
     {
