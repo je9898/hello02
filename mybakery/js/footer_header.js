@@ -5,6 +5,9 @@ fetch("header.html").then(function response(response){
     let link = JSON.stringify(window.location.pathname).split('/');
     console.log(link[link.length-1].replaceAll(".html\"",""))
     let linkName = link[link.length-1].replaceAll(".html\"","");
+    if(linkName === "boardDt" || linkName === "eventDt"){
+        linkName = "board"
+    }
     document.querySelector("#"+linkName).setAttribute("class","active");
 
     if(sessionStorage.getItem("loginData")){
@@ -12,7 +15,7 @@ fetch("header.html").then(function response(response){
         let price = document.querySelector("#price");
         let id = loginData.id;
         if(localStorage.getItem(id) === null){
-            price.innerHTML = "내역없음";
+            price.innerHTML = "0원";
         }else{
             price.innerHTML = localStorage.getItem(id) + "원";
         }

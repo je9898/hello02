@@ -50,7 +50,7 @@ makeBtn.addEventListener("click",function (){
     console.log(localStorage)
     alert("작성완료 !")
     localStorage.setItem('getB', boardCnt);
-    location.href = "boardDt.html";
+    location.href = "board.html";
 });
 
 //날짜 리턴

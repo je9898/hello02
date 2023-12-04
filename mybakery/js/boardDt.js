@@ -1,4 +1,5 @@
 let boardData = JSON.parse(sessionStorage.getItem("getB"));
+console.log(boardData);
 let showBoard = document.querySelector(".showBoard");
 let html = "";
 
