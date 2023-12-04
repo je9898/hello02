@@ -33,7 +33,7 @@ function makeOrderInfo(){
 
         tbody.innerHTML += html;
     }
-    
+
 }
 
 function addBasket(index){
