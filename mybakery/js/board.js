@@ -3,10 +3,8 @@ let cnt = 1;
 let numberButton;
 
 setParam = JSON.parse(localStorage.setParam || "{}");
-console.log(setParam);
 
 let bData= setParam.boardTable || [];
-
 const COUNT_PER_PAGE = 5;
 const totalPageCount = () => {
     return Math.ceil(bData.length/COUNT_PER_PAGE);
@@ -18,10 +16,18 @@ function setPageOf(count){
     if(bData.length === 0){
         return;
     }
+
     cnt = count;
 
     tbody.innerHTML = "";
+    console.log(bData)
+    debugger;
     for(i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){
+        if(bData[i].kate = 1){
+            bData[i].kate = "이벤트"
+            }else{
+            bData[i].kate = "공지사항"   
+            }
         html = "<tr>" +
                 "    <td>"+(bData[i].boardId+1)+"</td>" +
                 "    <th>" +
@@ -29,10 +35,10 @@ function setPageOf(count){
                 "    <p>테스트</p>" +
                 "    </th>" +
                 "    <td>"+ bData[i].upDa +"</td>" +
+                "    <td>"+ bData[i].kate +"</td>" +
                 "</tr>" 
-        tbody.innerHTML += html;
-    }
-}
+                tbody.innerHTML += html;}
+        }
 
 function title_btn(i){
     localStorage.setItem('getB', bData[i].boardId);
@@ -58,6 +64,7 @@ const setPageBtn = () => {
       }
     };
 
+// 작성진입
 let admin = document.querySelector("#admin");
 admin.addEventListener("dblclick",function (){
    let loginData = JSON.parse(sessionStorage.getItem("loginData"));
@@ -69,5 +76,4 @@ admin.addEventListener("dblclick",function (){
 });
     
 setPageBtn();
-setPageOf(cnt); // 첫페이지 첫진입
-
+setPageOf(cnt); // 첫페이지 첫진입c

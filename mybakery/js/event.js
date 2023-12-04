@@ -36,7 +36,7 @@ function setPageOf(count){
 
       
 function title_btn(i){
-    localStorage.setItem('getE',eData[i].eventId);    
+    sessionStorage.setItem('getE',eData[i].eventId);    
     location.href ='eventDT.html';
     console.log(eData[i]);
 }
