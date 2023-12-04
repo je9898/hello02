@@ -77,6 +77,7 @@ crSb.addEventListener("click",function (){
 //초기화 버튼    
 crRe.addEventListener("click",function (){
     document.querySelectorAll("input[type=text], input[type=textarea]")[0].value="";
+    alert("초기화 되었습니다."); 
     });
 
 function saveData() {
@@ -95,7 +96,6 @@ let incruitData = setParam.cruTable.length;
     localStorage.setItem("setParam", JSON.stringify(setParam));
     console.log("Data saved:", params);
 }
-
 
 //저장
     // let incruitData = setParam.cruTable.length;
