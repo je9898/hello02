@@ -7,6 +7,7 @@
     text-align: center;
     float: right;
     text-align: right;
+    margin-top: 5px;
   }
   
   #incruitSubmit{
@@ -207,8 +208,6 @@
   .textBtn{
     margin : 5px;
   }
-
-  /*이벤트 css*/
-  #event_search_btn{
-    width: 10px;
+  .incruit spad{
+    height: 80%;
   }
