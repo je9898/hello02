@@ -54,6 +54,7 @@ function logout() {
 
 function goBasket(){
     if (!sessionStorage.getItem("loginData")){
+        alert("로그인이 필요합니다.")
         location.href="login.html";
     }else{
         location.href="basket.html";
