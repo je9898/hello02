@@ -10,27 +10,34 @@
     margin-top: 5px;
   }
   
-  #incruitSubmit{
+  .inBtn{
+    border:solid 0px;
+    position: relative;
+    height: 37px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #fdf1a0; 
+    color:#000;
+    border-radius: 20px;
+  }
+
+  /* #incruitSubmit{
     position: relative;
     border-radius: 5px;
-    background-color: #f08632; 
-    color:white;
+    background-color: #fdf1a0; 
+    color:#000;
   }
   
   #incruitReset{
     position: relative;
     border-radius: 5px;
-    background-color: #f08632; 
-    color:white;
+    background-color: #fdf1a0; 
+    color:#000;
   }
-  
+  */
   #ad_Btn{
-    position: relative;
-    border-radius: 5px;
-    background-color: #f08632; 
-    color:white;
     margin: 15px;
-  }
+  } 
   
   .incruit__title {
     color: #111111;

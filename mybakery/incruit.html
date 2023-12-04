@@ -80,7 +80,7 @@
                                 <input type="text" placeholder="우편번호" id="inPost" >
                                 <input type="text" placeholder="주소" id="inAdr2">
                                 <input type="text" placeholder="상세주소" class="incruit__input__add" id="inAdr">
-                                <button type="button" onclick=" js:adBtn()" value="우편번호찾기" id="ad_Btn" >검색</button>
+                                <button type="button" onclick=" js:adBtn()" value="우편번호찾기" id="ad_Btn" class="inBtn" >검색</button>
                                 <div class="">
                                     <div class="incruit__input">
                                         <p>전화번호<span>*</span></p>
@@ -97,8 +97,8 @@
                                         <textarea class = "form-control" rows="5" id="inText" maxlength="">내용을 입력해주세요.</textarea>
                                     </div>  
                                     <div class = "cru_btn">
-                                        <button type ="button" value = incruit_submit id="incruitSubmit">제출</button> 
-                                        <button type ="reset" value = reset id="incruitReset">초기화</button>
+                                        <button type ="button" value = incruit_submit id="incruitSubmit" class =inBtn>제출</button> 
+                                        <button type ="reset" value = reset id="incruitReset" class="inBtn">초기화</button>
                                     </div>
                                 </div> 
                             </div>
@@ -136,10 +136,10 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script src="js/incruit.js"></script>
 <script src="js/footer_header.js"></script>
-<script src="js/data.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 
