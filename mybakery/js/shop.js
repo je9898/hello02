@@ -62,6 +62,7 @@ function makeMenu(type){
             makeImgDiv.innerHTML += html;
         }
     }
+    sessionStorage.setItem("sessionKate","");
 }
 
 //메뉴 상세 페이지로 넘어가면서 mnuId와 mnuca 값 url에 저장하기
@@ -289,4 +290,13 @@ function myFunc() {
 
 
 myFunc();
-makeImg(); 
+
+let sessionKate = sessionStorage.getItem("sessionKate");
+
+if(sessionKate === "" || sessionKate === null || sessionKate === undefined){
+    makeImg();
+}else{
+    makeMenu(sessionKate);
+}
+
+
