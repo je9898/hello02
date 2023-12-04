@@ -7,6 +7,8 @@ fetch("header.html").then(function response(response){
     let linkName = link[link.length-1].replaceAll(".html\"","");
     if(linkName === "boardDt" || linkName === "eventDt"){
         linkName = "board"
+    }else if(linkName === "login" || linkName === "signUp") {
+        linkName = "index"
     }
     document.querySelector("#"+linkName).setAttribute("class","active");
 
@@ -41,7 +43,6 @@ function alliance(){
 function loginOut(){
     if (sessionStorage.getItem("loginData")){
         document.querySelector(".log_in").innerHTML = `<a href="#" class="log_in" onclick="logout()">Logout</a>`;
-        
     }
 }
 
@@ -49,7 +50,7 @@ function loginOut(){
 function logout() {
     sessionStorage.clear("loginData");
     alert("로그아웃 되었습니다.");
-    location.reload();
+    location.href="index.html";
 }
 
 function goBasket(){

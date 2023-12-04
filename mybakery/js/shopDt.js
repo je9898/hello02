@@ -21,9 +21,6 @@ let spPrice=""
 let dtImg="<img class='product_details_big_img' src='img/menuImg/img_" + DT1 + ".PNG' style='background-image: url(img/menuImg/img_" + DT1 + ".PNG)'>" + "</img>"
 
 //menuTable 자료 뿌려주기
-let setParam = {};
-setParam = JSON.parse(localStorage.setParam || "{}");
-//localStorage 데이터 받아 쓰기 (setParam 에 저장)
 console.log(setParam);
 
 //detail 파트에 저장해둔 Id값과 일치하는 항목 뿌려주기

@@ -2,11 +2,9 @@
 * 기능 : localStorage 데이터 전달받기
 * 기능 : 화면 진입 시 바로 init() 호출
 */
-let setParam = {};
 let boardTable = [];
 function init(){
     console.log("init : makeBoard.js !")
-    setParam = JSON.parse(localStorage.setParam || "{}");
     boardTable = setParam.boardTable || [];
     bdToday.value = today("yy.mm.dd");
 }
