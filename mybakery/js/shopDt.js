@@ -70,20 +70,24 @@ function afterAdd(){
 function makeRelate(){
     let html = "";
     let makeRelateDiv = document.querySelector("#makeRelateDiv");
+    let cnt = 1;
 
     for (let i = 0; i < setParam.menuTable.length; i++) {
         if (setParam.menuTable[i].mnuca == DT2){
+            cnt++;
+            if(cnt === 6){
+                break;
+            }
         html =
             "<div class='col-lg-3'>" +
                 "<div class='product__item'>" +
                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
-                        //이 부분 클래스를 span으로 묶는 게 좋은 건지 아니면 이렇게 둬도 되는지
-                    "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
-                        //위의 질문에 답변에 따라 얘도 맞추기
-                    "<h6><a href='#'>" + setParam.menuTable[i].mnuNa + "</a></h6>" +
+                      "<div class='product__label'>" + "<span>" + setParam.menuTable[i].mnuca + "</span>" + "</div>" +   
+                    "<span>" + setParam.menuTable[i].mnuNa + "</span>" +
+                    // "<a href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ",\"" + setParam.menuTable[i].mnuca + "\")'>자세히 보기</a>"
                     "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
-                    "<div class='cart_add'>" + "<a href='#'>" + 'Add to cart' + "</a>" + "</div>" +     
-                "</div>"
+                "</div>"  +
+            "</div>"  
 
         makeRelateDiv.innerHTML += html;
         console.log(html);
