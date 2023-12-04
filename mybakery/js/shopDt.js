@@ -38,6 +38,10 @@ for (let i = 0; i < setParam.menuTable.length; i++) {
 }
 
 function addMenu(){
+    if (!sessionStorage.getItem("loginData")){
+        alert("로그인이 필요합니다.")
+        location.href="login.html";
+    }
    let addBasket = {
         userNo : loginData.userNo,
         mnuId :  parseInt(DT1),
@@ -80,7 +84,7 @@ function makeRelate(){
             "<div class='col-lg-3'>" +
                 "<div class='product__item'>" +
                     "<div class='product__item__pic set-bg' data-setbg='img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG' style='background-image: url(img/menuImg/img_" + setParam.menuTable[i].mnuId + ".PNG)'>" + "</div>" +
-                    "<a class='font_color' href='javascript:void(0);' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ",\"" + setParam.menuTable[i].mnuca + "\")'>" + setParam.menuTable[i].mnuNa + "</a>" +
+                    "<span class='font_color' id='font_color' onclick='gomenuDt(" + setParam.menuTable[i].mnuId + ",\"" + setParam.menuTable[i].mnuca + "\")'>" + setParam.menuTable[i].mnuNa + "</span>" +
                     "<div class='product__item__price'>" + setParam.menuTable[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원' + "</div>" +
                 "</div>"  +
             "</div>"  
@@ -107,7 +111,7 @@ let varName = document.querySelector(".product_name")
 let varlabel = document.querySelector(".product_label")
 let varprice = document.querySelector(".product_price")
 let varinfor = document.querySelector(".product_infor")
-let varimg = document.querySelector(".product_details_big_img")
+let varimg = document.querySelector(".product_details_big_img_div")
 
 varName.innerHTML=dtName
 varlabel.innerHTML=dtCate
