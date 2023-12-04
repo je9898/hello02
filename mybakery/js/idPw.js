@@ -1,8 +1,9 @@
-if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
+/*if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
     localStorage.setItem("userData",JSON.stringify(userData));
-}
-const localIdPw = JSON.parse(localStorage.getItem("userData"));
+}*/
+//const localIdPw = JSON.parse(localStorage.getItem("userData"));
 
+const localIdPw = setParam.userData;
 // 아이디 찾기
 function idFindButton(){
     const id_find_name = document.querySelector('.id_find_name').value;

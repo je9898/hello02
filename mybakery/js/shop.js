@@ -1,5 +1,4 @@
-let setParam = {};
-setParam = JSON.parse(localStorage.setParam || "{}");
+
 //localStorage 데이터 받아 쓰기 (setParam 에 저장)
 console.log(setParam);
 
@@ -67,10 +66,6 @@ function makeMenu(type){
 
 //메뉴 상세 페이지로 넘어가면서 mnuId와 mnuca 값 url에 저장하기
 function gomenuDt(mnuId, mnuca){
-    console.log(mnuId)
-    console.log(mnuca)
-    localStorage.setItem("nextMenuId",mnuId);
-    localStorage.setItem("nextMenuca",mnuca);
     location.href="shopDt.html" + "?" + mnuId + "?" + mnuca;
 }
 

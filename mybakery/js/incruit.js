@@ -68,10 +68,9 @@ crSb.addEventListener("click",function (){
     crEm.value === "" ||
     crIntr.value === "" ||
     crAd.value === ""){
-    alert("모든 내용을 입력해 주세요.");
-    }else{
-    alert("제출완료"); 
-    location.href = "index.html";
+    alert("모든 내용을 입력해 주세요.")
+    return;
+    saveData();
     }})
 
 //초기화 버튼    

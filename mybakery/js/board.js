@@ -1,10 +1,6 @@
-let setParam ={};
 let cnt = 1;
 let numberButton;
-
-setParam = JSON.parse(localStorage.setParam || "{}");
-
-let bData= setParam.boardTable || [];
+let bData= setParam.boardTable;
 const COUNT_PER_PAGE = 5;
 const totalPageCount = () => {
     return Math.ceil(bData.length/COUNT_PER_PAGE);
@@ -20,9 +16,13 @@ function setPageOf(count){
     cnt = count;
 
     tbody.innerHTML = "";
-    for(let i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count -1; i++){
+    for(let i=COUNT_PER_PAGE*(count-1); i<COUNT_PER_PAGE*count; i++){
+        if(i === bData.length){
+            break;
+        }
         let kate;
-        console.log(bData[i])
+        console.log(COUNT_PER_PAGE*(count-1))
+        console.log(COUNT_PER_PAGE*count -1)
         if(bData[i].kate === "1"){
             kate = "이벤트"
         }else{

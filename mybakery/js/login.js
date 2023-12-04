@@ -6,17 +6,16 @@ const keepId = document.querySelector("#keepId");
 window.onload = () => {
     const keepIdValue = JSON.parse(localStorage.getItem("keepId"));
 
-    if (keepIdValue != ""){
+    if (keepIdValue !== ""){
         userId.value = keepIdValue;
         keepId.checked = true;
-}
     }
-
-// 데이터js의 내용이 로컬저장소에 없을시 저장해줌
-if(localStorage.userData === null || localStorage.userData === undefined || JSON.stringify(localStorage.userData) === "[]"){
-    localStorage.setItem("userData",JSON.stringify(userData));
 }
-    const localLogin = JSON.parse(localStorage.getItem("userData"));
+
+
+//const localLogin = JSON.parse(localStorage.getItem("userData"));
+const localLogin = setParam.userData;
+
 // 로그인 버튼 클릭시 입력한 id, pw를 data.js와 비교, 맞을시 json형태로 세션스토리지에 저장, 나중에 헤더에 연결 해야 함
 function loginBtn(){
     const login = localLogin.find((data)=>{
