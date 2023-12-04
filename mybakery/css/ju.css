@@ -61,5 +61,11 @@
 
   .font_color{  
     color: #000000;
+    cursor: pointer;
     
   }
+
+  .font_color :hover{
+    background-color: #000000;
+  }
+
