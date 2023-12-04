@@ -410,7 +410,7 @@ ol {
   position: absolute;
   left: 50%;
   top: 25px;
-  margin-left: -60px;
+  margin-left: -120px;
 }
 .header__logo a {
   display: inline-block;
@@ -1266,6 +1266,9 @@ ol {
 }
 .footer__about .footer__social a:last-child {
   margin-right: 0;
+}
+.footer-bottom{
+  height: 40px;
 }
 
 /* 크루모집, 제휴업체 가운데 위젯에 같이 둠 */
