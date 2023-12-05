@@ -100,6 +100,7 @@ ul,
 ol {
   padding: 30px;
   margin: 0;
+  margin-top: -25px;
 }
 
 /*---------------------
@@ -341,7 +342,7 @@ ol {
 #logo_img{
   height: 250px;
   width: 250px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -475,6 +476,8 @@ ol {
 }
 .header__menu {
   text-align: center;
+  margin-top: -30px;
+  margin-bottom: -10px;
 }
 .header__menu ul li {
   list-style: none;
@@ -1250,7 +1253,7 @@ ol {
   content: "";
 }
 .footer__about .footer__logo {
-  margin-bottom: 32px;
+  margin-bottom: 5px;
 }
 .footer__about .footer__logo a {
   display: inline-block;
@@ -1259,7 +1262,7 @@ ol {
   font-size: 14px;
   color: black;
   line-height: 26px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 .footer__about .footer__social a {
   display: inline-block;
