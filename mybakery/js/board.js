@@ -80,8 +80,17 @@ admin.addEventListener("dblclick",function (){
    }
 });
 
+let searchInput = document.querySelector("#search");
+let InputFocusYN = "N";
+
+searchInput.onfocus = function(){
+    InputFocusYN = "Y";
+}
+searchInput.onblur = function(){
+    InputFocusYN = "N";
+}
 window.addEventListener("keydown",function (data){
-    if(data.key === "Enter"){
+    if(InputFocusYN === "Y" && data.key === "Enter"){
         searcheee();
     }
 });
