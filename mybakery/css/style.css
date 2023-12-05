@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  color: #11111194;
+  color: #000;
   font-weight: 400;
 }
 
@@ -479,6 +479,7 @@ ol {
   margin-top: -30px;
   margin-bottom: -10px;
 }
+
 .header__menu ul li {
   list-style: none;
   display: inline-block;
@@ -491,6 +492,12 @@ ol {
 .header__menu ul li:hover a {
   background:  #fdf1a0;
 }
+
+.header__menu li:hover .ahover:hover {
+  background-color: #bf8b75;
+}
+
+
 .header__menu ul li:hover .dropdown {
   top: 62px;
   opacity: 1;
@@ -543,7 +550,9 @@ ol {
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
+  margin-top: 0;
 }
+
 .header__menu ul li .dropdown li {
   display: block;
   margin-right: 0;
