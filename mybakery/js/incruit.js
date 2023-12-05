@@ -51,12 +51,12 @@ let incruitData = setParam.cruTable.length;
     }else{
         params.crNo = setParam.cruTable[incruitData-1].crNo +1;
     }
-    params.crNa = setParam.value;
-    params.crBir = setParam.value;
-    params.crAd = setParam.value;
-    params.crPh = setParam.value;
-    params.crEm = setParam.value;
-    params.crIntr = setParam.value;
+    params.crNa = crNa.value;
+    params.crBir = crBir.value;
+    params.crAd = crAd.value;
+    params.crPh = crPh.value;
+    params.crEm = crEm.value;
+    params.crIntr = crIntr.value;
 
     setParam.cruTable.push(params);
     localStorage.setItem("setParam", JSON.stringify(setParam));
