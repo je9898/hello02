@@ -9,12 +9,15 @@
                     <div class="header__top__right">
                         <div class="header__top__right__links">
                             <a href="login.html" class="log_in">Login</a>
-                            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                            <a href="#" class="search-switch" onclick="searchIcon()"><img src="img/icon/search.png" alt=""></a>
                             <!-- <a href="#"><img src="img/icon/heart.png" alt=""></a> -->
                         </div>
                         <div class="header__top__right__cart">
                             <a href="javascript:void(0);" onclick="goBasket()"><img src="img/icon/cart.png" alt=""> <span></span></a>
                             <div class="cart__price">Cart: <span id="price">0 원</span></div>
+                        </div>
+                        <div class="searchDiv">
+                            <input type="text" id="searchText" placeholder="메뉴명을 입력 해주세요."><button value="button" class="inBtn">검색</button>
                         </div>
                     </div>
                 </div>
@@ -48,4 +51,30 @@
     </div>
 </div>
 
-
+<style>
+    .searchDiv {
+        display: none;
+        margin-top: 10px;
+    }
+    #searchText {
+        border: 1px solid rgb(163, 163, 163);
+        text-align: center;
+        margin-right: 3px;
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .inBtn {
+        border: solid 0px;
+        position: relative;
+        height: 30px;
+        width: 50px;
+        border-radius: 5px;
+        background-color: #fdf1a0;
+        color: #000;
+        border-radius: 20px;
+    }
+    .inBtn:hover {
+        background-color: #bf8b75;
+    }
+</style>

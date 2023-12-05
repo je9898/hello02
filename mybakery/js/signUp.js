@@ -52,7 +52,7 @@ function signUpButton(){
     const paypal = document.querySelector("#paypal").checked;
 
     const expName = /^[가-힣]+$/;
-    const expId = /^[A-Za-z]{3,20}$/;
+    const expId = /^[A-Za-z0-9]{3,20}$/;
     const expPhone = /^\d{3}-\d{3,4}-\d{4}$/;
     const expEmail = /^[A-Za-z-0-9\-\.]+@[A-Ja-z-0-9\-\.]+\.[A-Ja-z-0-9]+$/;
 
