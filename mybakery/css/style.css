@@ -1427,7 +1427,10 @@ ol {
   Breadcrumb
 -----------------------*/
 .breadcrumb-option {
-  padding-top: 60px;
+  padding-top: 20px;
+}
+.breadcrumb__text {
+  margin-left: 30%;
 }
 
 /* .breadcrumb__text h2 {
