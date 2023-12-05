@@ -11,13 +11,17 @@
 }
 
 #btn_zip_code {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid #dddddd;
-    width: 120px;
-    height: 49px;
-    color: rgb(61, 61, 61);
     margin-left: 10px;
-    border-radius: 10px;
+    border: solid 0px;
+    height: 49px;
+    width: 120px;
+    border-radius: 20px;
+    background-color: #fdf1a0;
+    color: #000;
+}
+
+#btn_zip_code:hover {
+  background-color: #bf8b75;
 }
 
 .breadcrumb__text h2 {
@@ -48,14 +52,17 @@
   }
 
   .testbtn {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid #dddddd;
-    width: 120px;
+    border: solid 0px;
     height: 49px;
-    color: rgb(61, 61, 61);
+    width: 120px;
+    border-radius: 20px;
+    background-color: #fdf1a0;
+    color: #000;
     margin-top: 40px;
     margin-right: 100px;
-    border-radius: 10px;
+  }
+  .testbtn:hover {
+    background-color: #bf8b75;
   }
 
   .scrollBar1 {

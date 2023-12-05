@@ -73,3 +73,14 @@ function shopKate(kate){
     location.href="shop.html";
 }
 
+let YN = "N"
+function searchIcon(){
+let searchDiv = document.querySelector(".searchDiv");
+    if(YN === "N"){
+        searchDiv.style.display = "block"
+        YN = "Y"
+    }else{
+        searchDiv.style.display = "none";
+        YN = "N"
+    }
+}
