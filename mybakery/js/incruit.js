@@ -7,9 +7,6 @@ const crRe = document.querySelector('#incruitReset');// 리셋버튼
 const crAd = document.querySelector('.incruit__input__add'); //주소
 
 // 텍스트 예시
-
-localStorage.clear(); // 비워주기
-
 function init(){
     console.log("init : incruitData.js !");
     console.log(setParam);
