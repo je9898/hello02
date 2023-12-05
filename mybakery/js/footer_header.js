@@ -84,3 +84,12 @@ let searchDiv = document.querySelector(".searchDiv");
         YN = "N"
     }
 }
+
+function menuSearch(){
+    const searchAlert = document.querySelector("#searchText");
+    if(searchAlert.value == ""){
+        alert("검색어가 없습니다.")
+    }else{
+        location.href = "shop.html";
+    }
+}
