@@ -67,13 +67,13 @@
                                 <div class="col-lg-12">
                                     <div class="incruit__input">
                                         <p>이름<span>*</span></p>
-                                        <input type="text" id ="crName" value="홍길동" minlength="2" maxlength="10">
+                                        <input type="text" id ="crName" placeholder="이름을 입력해 주세요" minlength="2" maxlength="10">
                                     </div>
                                 </div>
                             </div>
                             <div class="incruit__input">
                                 <p>생년월일<span>*</span></p>
-                                <input type="text" id = "inBirth" value = "991010" minlength="6" maxlength="6">
+                                <input type="text" id = "inBirth" placeholder = "생년월일 앞 6자리를 입력해 주세요" minlength="6" maxlength="6">
                             </div>
                             <div class="incruit__input">
                                 <p>주소<span>*</span></p>
@@ -84,20 +84,20 @@
                                 <div class="">
                                     <div class="incruit__input">
                                         <p>전화번호<span>*</span></p>
-                                        <input type="text" id = inPhone value="010-0000-0000" maxlength = "16" minlength= "9">
+                                        <input type="text" id = inPhone placeholder="휴대폰 번호를 입력해 주세요" maxlength = "16" minlength= "9">
                                     </div>
                                     <div class="">
                                         <div class="incruit__input">
                                             <p>Email<span>*</span></p>
-                                            <input type="text" id = "crEm" value="exm@exm.com">
+                                            <input type="text" id = "crEm" placeholder="이메일 주소를 입력해 주세요">
                                         </div>
                                     </div>
                                     <div class = "incruit__input text">
                                         <p>자기소개서<span>*</span></p>
-                                        <textarea class = "form-control" rows="5" id="inText" maxlength="">내용을 입력해주세요.</textarea>
+                                        <textarea class = "form-control" rows="5" id="inText" maxlength="" placeholder="내용을 입력해주세요." ></textarea>
                                     </div>  
                                     <div class = "cru_btn">
-                                        <button type ="button" value = incruit_submit id="incruitSubmit" class =inBtn>제출</button> 
+                                        <button type ="button" value = incruit_submit id="incruitSubmit" class =inBtn onclick="saveData()">제출</button>
                                         <button type ="reset" value = reset id="incruitReset" class="inBtn">초기화</button>
                                     </div>
                                 </div> 
