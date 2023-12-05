@@ -69,8 +69,17 @@ function goBasket(){
 }
 
 function shopKate(kate){
+    if(kate === "search"){
+        const searchAlert = document.querySelector("#searchText");
+        if(searchAlert.value == "") return alert("검색어가 없습니다.");
+        if(searchAlert.value) {
+            kate = searchAlert.value;
+            sessionStorage.setItem("sessionKate",kate);
+            return location.href="shop.html";}
+    }
     sessionStorage.setItem("sessionKate",kate);
     location.href="shop.html";
+
 }
 
 let YN = "N"
@@ -82,14 +91,5 @@ let searchDiv = document.querySelector(".searchDiv");
     }else{
         searchDiv.style.display = "none";
         YN = "N"
-    }
-}
-
-function menuSearch(){
-    const searchAlert = document.querySelector("#searchText");
-    if(searchAlert.value == ""){
-        alert("검색어가 없습니다.")
-    }else{
-        location.href = "shop.html";
     }
 }
