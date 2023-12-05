@@ -6,13 +6,15 @@ fetch("header.html").then(function response(response){
     console.log(link[link.length-1].replaceAll(".html\"",""))
     let linkName = link[link.length-1].replaceAll(".html\"","");
     if(linkName === "boardDt" || linkName === "eventDt"){
-        linkName = "board"
+        linkName = "board";
     }else if(linkName === "login" || linkName === "signUp") {
-        linkName = "index"
+        linkName = "index";
     }else if (linkName === "shopDt"){
-        linkName = "shop"
+        linkName = "shop";
     }else if(linkName === "order"){
-        linkName = "basket"
+        linkName = "basket";
+    }else if(linkName === "incruit"){
+        linkName = "about";
     }
     document.querySelector("#"+linkName).setAttribute("class","active");
 
