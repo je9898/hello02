@@ -1,8 +1,11 @@
 .site-btn {
     display: block;
-    margin: auto;
-    margin-top: 80px;
     width: 80%;
+    color: black;
+    background-color: #fdf1a0;
+}
+.site-btn :hover{
+    background-color: #bf8b75;
 }
 
 .breadcrumb__text {
