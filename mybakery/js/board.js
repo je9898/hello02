@@ -99,7 +99,6 @@ function searcheee(){
     console.log(searchNumber)
     if(searchNumber.length === 0){  //검색결과 없으면 이거타자
         alert("검색결과가 없습니다.");
-        return;
     }else{  // 검색결과 있으면 그려주자
         searchFunc(searchNumber)
     }
